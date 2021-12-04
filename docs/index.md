@@ -5,7 +5,7 @@ heroAlt: Vue3.x及相关文档
 heroText: Vue3.x technical documentation
 tagline: Vue3.x + 脚手架 + 路由 + 状态管理 + 服务端渲染
 actionText: Get Started
-actionLink: /optionsAPI/introduce/index
+actionLink: syntax/introduce
 features:
   - title: 保持分享
     details: 分享知识是一种美德，如果我们每个人都把知识分享给这个社会，那么这个社会将会变得越来越好。
