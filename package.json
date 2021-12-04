@@ -19,10 +19,6 @@
   "dependencies": {
     "vitepress": "^0.20.0"
   },
-  "devDependencies": {
-    "stylus": "^0.55.0",
-    "stylus-loader": "^6.2.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FEndTeam/VueCourse.git"
