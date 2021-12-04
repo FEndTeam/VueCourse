@@ -1,0 +1,33 @@
+{
+  "name": "vue-course",
+  "version": "1.0.0",
+  "description": "这个仓库是用来学习Vue的",
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/FEndTeam/VueCourse/issues"
+  },
+  "homepage": "https://github.com/FEndTeam/VueCourse#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "vitepress": "^0.20.0"
+  },
+  "devDependencies": {
+    "stylus": "^0.55.0",
+    "stylus-loader": "^6.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FEndTeam/VueCourse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
