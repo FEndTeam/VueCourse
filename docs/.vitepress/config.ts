@@ -39,6 +39,7 @@ function getGuideSidebar() {
       text: "基础语法",
       children: [
         { text: 'Vue介绍', link: '/syntax/introduce' },
+        { text: '基本使用', link: '/syntax/basicuse'}
       ]
     },
 
