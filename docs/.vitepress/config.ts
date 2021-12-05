@@ -38,8 +38,23 @@ function getGuideSidebar() {
     {
       text: "基础语法",
       children: [
-        { text: 'Vue介绍', link: '/syntax/introduce' },
-        { text: '基本使用', link: '/syntax/basicuse'}
+        {
+          text: 'Vue简介', children: [
+            { text: 'Vue介绍', link: '/syntax/introduce' },
+            { text: '基本使用', link: '/syntax/basicuse' },
+          ],
+        },
+        {
+          text: '指令系统', children: [
+            { text: '数据渲染指令', link: '/syntax/data-directive' },
+            // { text: '列表渲染指令', link: '/syntax/list-directive' },
+            // { text: '指令-属性绑定', link: '/syntax/render-directive'},
+            // { text: '指令-事件绑定', link: '/syntax/render-directive'},
+            // { text: '指令-表单绑定', link: '/syntax/render-directive'},
+            // { text: '指令-自定义', link: '/syntax/render-directive'},
+          ],
+        }
+
       ]
     },
 
