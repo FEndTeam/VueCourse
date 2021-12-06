@@ -12,7 +12,7 @@
 
 ::: info Experience
 
-## `v-if/v-else-if/v-else`指令
+## 1. `v-if/v-else-if/v-else`指令
 
 `v-if/v-else-if/v-else`指令用来辅助开发者按需控制 虚拟DOM 是否被编译为真实DOM。
 这三个指令中 `v-if` 相当于 `DOM` 中的 单分支条件语句 可以单独使用
@@ -36,7 +36,7 @@
   </div>
 ```
 
-## `v-show`指令
+## 2. `v-show`指令
 
 `v-show`指令用来辅助开发者按需控制DOM的样式`display:none`或者`display:block`
 
