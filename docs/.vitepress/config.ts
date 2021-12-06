@@ -46,6 +46,7 @@ function getGuideSidebar() {
         },
         {
           text: '指令系统', children: [
+            { text: '指令系统介绍', link: '/syntax/directive' },
             { text: '数据渲染指令', link: '/syntax/data-directive' },
             { text: '条件渲染指令', link: '/syntax/condition-directive' },
             { text: '列表渲染指令', link: '/syntax/list-directive' },
@@ -53,6 +54,12 @@ function getGuideSidebar() {
             { text: '事件绑定指令', link: '/syntax/event-directive'},
             { text: '表单绑定指令', link: '/syntax/model-directive'},
             { text: '自定义的指令', link: '/syntax/custom-directive'},
+          ],
+        },
+        {
+          text: '组件系统', children: [
+            { text: '组件系统介绍', link: '/syntax/component' },
+           
           ],
         }
 
