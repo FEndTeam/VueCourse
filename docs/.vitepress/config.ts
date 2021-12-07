@@ -59,7 +59,16 @@ function getGuideSidebar() {
         {
           text: '组件系统', children: [
             { text: '组件系统介绍', link: '/syntax/component' },
-           
+            { text: '组件系统基础', link: '/syntax/basic' },
+            // { text: '组件模板', link: '/syntax/template' },
+            // { text: '组件状态', link: '/syntax/template' },
+            // { text: '组件方法', link: '/syntax/template' },
+            { text: '计算属性', link: '/syntax/template' },
+            { text: '侦听器', link: '/syntax/template' },
+            { text: '动效', link: '/syntax/template' },
+            { text: '组件通信', link: '/syntax/template' },
+            { text: '插槽', link: '/syntax/template' },
+            { text: '生命周期', link: '/syntax/template' },
           ],
         }
 
@@ -85,3 +94,18 @@ function getGuideSidebar() {
     }
   ]
 }
+
+// 历史的发展
+// 单页面应用
+// 介绍Vue
+// 组件
+// 组件的data -->
+// 组件的模板 --> 模板里面的指令
+// 组件的方法 --> 
+// 组件的计算属性
+// 组件的侦听器
+// 组件的插槽
+// 组件的生命周期
+
+// 组件之间的通信
+// 组件的动效

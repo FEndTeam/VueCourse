@@ -13,9 +13,9 @@ Components─┼──────► 侦听器(watch)
            │
            ├──────► 动效(effect)
            │
-           ├──────► 插槽(slot)
-           │
            ├──────► 组件通信(communicate)
+           │
+           ├──────► 插槽(slot)
            │
            └──────► 生命周期(lifecycle)
 ```
