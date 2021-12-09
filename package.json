@@ -23,7 +23,7 @@
     "type": "git",
     "url": "git+https://github.com/FEndTeam/VueCourse.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["doc"],
+  "author": "YeungWanLum",
   "license": "ISC"
 }

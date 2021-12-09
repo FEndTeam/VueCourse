@@ -40,8 +40,12 @@ function getGuideSidebar() {
       children: [
         {
           text: 'Vue简介', children: [
+            // 历史的发展
+            // 单页面应用
             { text: 'Vue介绍', link: '/syntax/introduce' },
             { text: '基本使用', link: '/syntax/basicuse' },
+            // mvvm
+            // 框架和库
           ],
         },
         {
@@ -65,10 +69,10 @@ function getGuideSidebar() {
             // { text: '组件方法', link: '/syntax/template' },
             { text: '计算属性', link: '/syntax/computed' },
             { text: '侦听器', link: '/syntax/watch' },
-            { text: '动效', link: '/syntax/template' },
-            { text: '组件通信', link: '/syntax/template' },
-            { text: '插槽', link: '/syntax/template' },
-            { text: '生命周期', link: '/syntax/template' },
+            { text: '动效', link: '/syntax/effect' },
+            { text: '组件通信', link: '/syntax/communication' },
+            { text: '插槽', link: '/syntax/slot' },
+            { text: '生命周期', link: '/syntax/lifecycle' },
           ],
         }
 
@@ -106,6 +110,5 @@ function getGuideSidebar() {
 // 组件的侦听器
 // 组件的插槽
 // 组件的生命周期
-
 // 组件之间的通信
 // 组件的动效
