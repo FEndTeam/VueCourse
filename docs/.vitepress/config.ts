@@ -54,10 +54,10 @@ function getGuideSidebar() {
             { text: '数据渲染指令', link: '/syntax/data-directive' },
             { text: '条件渲染指令', link: '/syntax/condition-directive' },
             { text: '列表渲染指令', link: '/syntax/list-directive' },
-            { text: '属性绑定指令', link: '/syntax/attribute-directive'},
-            { text: '事件绑定指令', link: '/syntax/event-directive'},
-            { text: '表单绑定指令', link: '/syntax/model-directive'},
-            { text: '自定义的指令', link: '/syntax/custom-directive'},
+            { text: '属性绑定指令', link: '/syntax/attribute-directive' },
+            { text: '事件绑定指令', link: '/syntax/event-directive' },
+            { text: '表单绑定指令', link: '/syntax/model-directive' },
+            { text: '自定义的指令', link: '/syntax/custom-directive' },
           ],
         },
         {
@@ -81,20 +81,39 @@ function getGuideSidebar() {
 
     {
       text: '脚手架',
-      children: []
+      children: [
+        {
+          text: '概述',
+          link: '/scaffold/introduce'
+        },
+      ]
     },
     {
       text: '路由管理器',
-      children: []
+      children: [
+        {
+          text: '概述',
+          link: '/routermanger/introduce'
+        },
+      ]
     },
-
     {
       text: '状态管理器',
-      children: []
+      children: [
+        {
+          text: '概述',
+          link: '/statemanger/introduce'
+        },
+      ]
     },
     {
       text: '服务端渲染',
-      children: []
+      children: [
+        {
+          text: '概述',
+          link: '/serverrender/introduce'
+        },
+      ]
     }
   ]
 }
