@@ -38,44 +38,10 @@ function getGuideSidebar() {
     {
       text: "基础语法",
       children: [
-        {
-          text: 'Vue简介', children: [
-            // 历史的发展
-            // 单页面应用
-            { text: 'Vue介绍', link: '/syntax/introduce' },
-            { text: '基本使用', link: '/syntax/basicuse' },
-            // mvvm
-            // 框架和库
-          ],
-        },
-        {
-          text: '指令系统', children: [
-            { text: '指令系统介绍', link: '/syntax/directive' },
-            { text: '数据渲染指令', link: '/syntax/data-directive' },
-            { text: '条件渲染指令', link: '/syntax/condition-directive' },
-            { text: '列表渲染指令', link: '/syntax/list-directive' },
-            { text: '属性绑定指令', link: '/syntax/attribute-directive' },
-            { text: '事件绑定指令', link: '/syntax/event-directive' },
-            { text: '表单绑定指令', link: '/syntax/model-directive' },
-            { text: '自定义的指令', link: '/syntax/custom-directive' },
-          ],
-        },
-        {
-          text: '组件系统', children: [
-            { text: '组件系统介绍', link: '/syntax/component' },
-            { text: '组件系统基础', link: '/syntax/basic' },
-            // { text: '组件模板', link: '/syntax/template' },
-            // { text: '组件状态', link: '/syntax/template' },
-            // { text: '组件方法', link: '/syntax/template' },
-            { text: '计算属性', link: '/syntax/computed' },
-            { text: '侦听器', link: '/syntax/watch' },
-            { text: '动效', link: '/syntax/effect' },
-            { text: '组件通信', link: '/syntax/communication' },
-            { text: '插槽', link: '/syntax/slot' },
-            { text: '生命周期', link: '/syntax/lifecycle' },
-          ],
-        }
-
+        { text: '前端发展史',  link: '/syntax/history'},
+        { text: '单页面应用', link: '/syntax/single-page-application'},
+        { text: '基本介绍', link: '/syntax/introduce'},
+        { text: '基本使用', link: '/syntax/basic-use'},
       ]
     },
 
@@ -124,7 +90,7 @@ function getGuideSidebar() {
 // 组件
 // 组件的data -->
 // 组件的模板 --> 模板里面的指令
-// 组件的方法 --> 
+// 组件的方法 -->
 // 组件的计算属性
 // 组件的侦听器
 // 组件的插槽

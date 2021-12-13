@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 挂载元素 -->
+  <div id="app">
+    <!-- 根组件 -->
+    <App></App>
+  </div> 
+
+  <!-- 引入 Vue库文件 -->
+  <script src="./lib/vue@next.js"></script>
+  <script>
+    // 创建 Vue 应用
+    let app = Vue.createApp({});
+
+    // 创建 根组件
+    app.component('App', {
+      template: `
+      <div>Hello Vue</div>
+      `,
+    })
+
+    // 把 app 挂载到 id 为 app的元素上
+    app.mount('#app');
+  </script>
+
+</body>
+
+</html>
