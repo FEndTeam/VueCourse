@@ -49,7 +49,7 @@ function getGuideSidebar() {
       text: '脚手架',
       children: [
         {
-          text: '概述',
+          text: '脚手架简介',
           link: '/scaffold/introduce'
         },
       ]
