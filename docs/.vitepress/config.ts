@@ -48,10 +48,8 @@ function getGuideSidebar() {
     {
       text: '脚手架',
       children: [
-        {
-          text: '脚手架简介',
-          link: '/scaffold/introduce'
-        },
+        { text: '脚手架简介', link: '/scaffold/introduce'},
+        { text: '项目创建', link: '/scaffold/create-project'},
       ]
     },
     {
