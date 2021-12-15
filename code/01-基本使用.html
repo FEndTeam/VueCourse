@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="./lib/vue@next.js"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
   </div> 
 
   <!-- 引入 Vue库文件 -->
-  <script src="./lib/vue@next.js"></script>
+
   <script>
     // 创建 Vue 应用
     let app = Vue.createApp({});
@@ -25,7 +26,13 @@
     app.component('App', {
       template: `
       <div>Hello Vue</div>
+      <Children/>
       `,
+      components: {
+        Children: {
+          template: "<h2>我是某一个组件的局部组件</h2>"
+        }
+      }
     })
 
     // 把 app 挂载到 id 为 app的元素上
