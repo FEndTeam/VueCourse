@@ -42,7 +42,7 @@ function getGuideSidebar() {
         { text: '单页面应用', link: '/syntax/single-page-application'},
         { text: '基本介绍', link: '/syntax/introduce'},
         { text: '基本使用', link: '/syntax/basic-use'},
-        { text: '组件声明', link: '/syntax/define-components'},
+        { text: '组件定义', link: '/syntax/define-components'},
       ]
     },
 
@@ -51,7 +51,7 @@ function getGuideSidebar() {
       children: [
         { text: '脚手架简介', link: '/scaffold/introduce'},
         { text: '项目创建', link: '/scaffold/create-project'},
-        { text: '路径别名', link: '/scaffold/create-project'},
+        { text: '路径别名', link: '/scaffold/alis'},
       ]
     },
     {

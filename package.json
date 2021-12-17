@@ -17,7 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "vitepress": "^0.20.1"
+    "vitepress": "^0.20.9"
   },
   "repository": {
     "type": "git",

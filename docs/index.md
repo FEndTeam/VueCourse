@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /hero.png
+heroImage: /images/hero.png
 heroAlt: Vue3.x及相关文档
 heroText: Vue3.x technical documentation
 tagline: Vue3.x + 脚手架 + 路由 + 状态管理 + 服务端渲染
