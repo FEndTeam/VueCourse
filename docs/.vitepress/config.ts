@@ -39,7 +39,6 @@ function getGuideSidebar() {
       text: "基础语法",
       children: [
         { text: '前端发展史',  link: '/syntax/history'},
-        { text: '单页面应用', link: '/syntax/single-page-application'},
         { text: '基本介绍', link: '/syntax/introduce'},
         { text: '基本使用', link: '/syntax/basic-use'},
         { text: '组件定义', link: '/syntax/define-components'},
@@ -57,10 +56,8 @@ function getGuideSidebar() {
     {
       text: '路由管理器',
       children: [
-        {
-          text: '概述',
-          link: '/routermanger/introduce'
-        },
+        { text: '单页面应用', link: '/routermanger/single-page-application'},
+        { text: '概述', link: '/routermanger/introduce'},
       ]
     },
     {
