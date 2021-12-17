@@ -57,7 +57,7 @@ function getGuideSidebar() {
       text: '路由管理器',
       children: [
         { text: '单页面应用', link: '/routermanger/single-page-application'},
-        { text: '概述', link: '/routermanger/introduce'},
+        { text: 'VueRouter介绍', link: '/routermanger/introduce'},
       ]
     },
     {
