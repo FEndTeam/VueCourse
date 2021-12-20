@@ -56,6 +56,7 @@ function getGuideSidebar() {
       text: '路由管理器',
       children: [
         { text: '单页面应用', link: '/routermanger/single-page-application'},
+        { text: '前端路由的概念与原理', link: '/routermanger/concept-principle-of-routing'},
         { text: 'VueRouter简介', link: '/routermanger/introduce'},
       ]
     },
