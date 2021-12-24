@@ -74,10 +74,12 @@
   * ⓶ 在项目入口文件中，挂载Pinia
   * ⓷ 在src目录创建stores文件夹并创建JavaScript文件
   * ⓸ 在JavaScript文件中声明Store
+  * ⓹ 在组件中引入Store
 
 * 【难点】
 
   * ⓶ 在项目入口文件中，挂载Pinia
   * ⓸ 在JavaScript文件中声明Store
+  * ⓹ 在组件中引入Store
 
 :::
