@@ -10,6 +10,7 @@
 2. 在项目入口文件中，挂载Pinia
 3. 在src目录创建stores文件夹并创建JavaScript文件
 4. 在JavaScript文件中声明Store
+5. 在组件中引入Store
 :::
 
 ::: info Experience
@@ -46,6 +47,21 @@
   // the first argument is a unique id of the store across your application
   export const useXxxx = defineStore('xxxx', {
     // other options...
+  })
+  ```
+
+* **Step. 5：在组件中引入Store**
+
+  ```js
+  // 引入Store文件
+  import { useXxxx } from '@/stores/xxxx'
+  // 引入 storeToRefs
+  import { storeToRefs } from 'pinia'
+  export default defineComponent({
+    setup() {
+      const store = useXxxx()
+      const { xxxx, xxxx } = storeToRefs(store)
+    },
   })
   ```
 
