@@ -67,6 +67,10 @@ function getGuideSidebar() {
           text: '概述',
           link: '/statemanger/introduce'
         },
+        {
+          text: '配置Pinia',
+          link: '/statemanger/pinia_config'
+        },
       ]
     },
     {
