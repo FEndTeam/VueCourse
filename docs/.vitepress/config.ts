@@ -65,7 +65,7 @@ function getGuideSidebar() {
       children: [
         {
           text: '概述',
-          link: '/statemanger/introduce'
+          link: '/statemanger/pinia_introduce'
         },
         {
           text: '配置Pinia',
