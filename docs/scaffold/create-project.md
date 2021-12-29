@@ -26,7 +26,7 @@ npm init vite@latest
 
 ```bash
 Need to install the following packages:
-  create-vite@latest
+create-vite@latest
 Ok to proceed? (y)
 ```
 

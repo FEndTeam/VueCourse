@@ -38,9 +38,13 @@ function getGuideSidebar() {
     {
       text: "基础语法",
       children: [
-        { text: '基本介绍', link: '/syntax/introduce'},
-        { text: '基本使用', link: '/syntax/basic-use'},
-        { text: '组件定义', link: '/syntax/define-components'},
+        { text: '简单介绍', link: '/syntax/introduce'},
+        { text: '基本结构', link: '/syntax/basic-use'},
+        { text: '组件化', children: [
+          { text: '组件概述', link: '/syntax/component_overview'},
+          { text: '全局组件', link: '/syntax/component_global'},
+          { text: '局部组件', link: '/syntax/component_partial'},
+        ]},
       ]
     },
 
@@ -56,7 +60,7 @@ function getGuideSidebar() {
       text: '路由管理器',
       children: [
         { text: '单页面应用', link: '/routermanger/single-page-application'},
-        { text: '前端路由的概念与原理', link: '/routermanger/concept-principle-of-routing'},
+        { text: '路由简单实现', link: '/routermanger/concept-principle-of-routing'},
         { text: 'VueRouter简介', link: '/routermanger/introduce'},
       ]
     },
