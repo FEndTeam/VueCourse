@@ -45,6 +45,7 @@ function getGuideSidebar() {
           { text: '全局组件', link: '/syntax/component_global'},
           { text: '局部组件', link: '/syntax/component_partial'},
         ]},
+        { text: '组件模板', link: '/syntax/component_template'},
       ]
     },
 

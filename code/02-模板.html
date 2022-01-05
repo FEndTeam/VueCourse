@@ -17,21 +17,20 @@
   </div>
 
   <!-- 引入 Vue库文件 -->
-
+  <script type="text/x-template" id="tmpl">
+    <div class="app">
+      <h1>Hello Vue</h1>
+    </div>
+  </script>
   <script>
     // 创建 Vue 应用
     let app = Vue.createApp({});
 
     // 创建 根组件
     app.component('App', {
-      template: `
-      <div>Hello Vue</div>
-      <Children/>
-      `,
-      components: {
-        Children: {
-          template: "<h2>我是某一个组件的局部组件</h2>"
-        }
+      template: '#tmpl',
+      setup(){
+        console.log(1111);
       }
     })
 

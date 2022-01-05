@@ -50,8 +50,8 @@
 ::: danger Note
 
 * 【重点】
-  1. 在`head`标签内引入 `Vue` 库文件
-  2. 在`script`标签中创建vue实例
-  3. 在body中创建一个元素`div`,把vue实例挂载到`div`上
+  * ⓵ 在`head`标签内引入 `Vue` 库文件
+  * ⓶ 在`script`标签中创建vue实例
+  * ⓷ 在body中创建一个元素`div`,把vue实例挂载到`div`上
 
 :::
