@@ -13,7 +13,7 @@
 
 ::: info Experience
 
-* **Step. 1：** 在`head`标签内引入 `Vue` 库文件
+* **Step. 1：在`head`标签内引入 `Vue` 库文件**
 
 ```html
 <head>
@@ -22,7 +22,7 @@
 </head>
 ```
 
-* **Step. 2：** 在body中创建一个元素`div`
+* **Step. 2：在body中创建一个元素`div`**
 
 ```html
 <body>
@@ -31,7 +31,7 @@
 </body>
 ```
 
-* **Step. 2：** 在`script`标签中创建vue实例,并挂载到`div`上
+* **Step. 3：在`script`标签中创建vue实例,并挂载到`div`上**
 
 ```html
 <body>

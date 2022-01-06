@@ -46,6 +46,7 @@ function getGuideSidebar() {
           { text: '局部组件', link: '/syntax/component_partial'},
         ]},
         { text: '组件模板', link: '/syntax/component_template'},
+        { text: '组件数据', link: '/syntax/component_data'},
       ]
     },
 
