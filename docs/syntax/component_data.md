@@ -15,15 +15,16 @@
 
 * **Kn.1：setup入口函数**
 
-  setup函数是一个新的组件选项。作为在组件内使用Composition API的入口点，
-  在Vue中，setup是最先执行的函数
+  setup选项是一个接收 props和context的函数。作为在组件内使用Composition API的入口点，
+  在Vue中，setup是最先执行的函数。现在先不研究怎么去接收prop和context
 
   ```js
     // 创建 根组件
     app.component('App', {
       template: '#tmpl',
-      setup(){
+      setup(props，context){
         console.log("我是setup函数")
+        return {} // 这里返回的任何内容都可以用于组件的其余部分
       }
     })  
   ```
