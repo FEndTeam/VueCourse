@@ -34,6 +34,12 @@
       template: '#tmpl',
       setup() {
         let name = ref("张三")
+        let handlerName = ()=>{
+          name.value = "王五"
+        }
+
+        handlerName();
+
         let person = reactive({
               name: "李四",
               age: 28,

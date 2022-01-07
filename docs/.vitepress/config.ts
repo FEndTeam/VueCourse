@@ -47,6 +47,7 @@ function getGuideSidebar() {
         ]},
         { text: '组件模板', link: '/syntax/component_template'},
         { text: '组件数据', link: '/syntax/component_data'},
+        { text: '组件方法', link: '/syntax/component_method'},
       ]
     },
 
@@ -104,3 +105,16 @@ function getGuideSidebar() {
 // 组件的生命周期
 // 组件之间的通信
 // 组件的动效
+
+/** 
+⓵
+⓶
+⓷
+⓸
+⓹
+⓺
+⓻
+⓼
+⓽
+⓾
+*/

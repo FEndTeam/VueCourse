@@ -2,28 +2,28 @@
   max-width: 60rem;
 }
 .custom-block {
+  position: relative;
   padding: 0.1rem 1.5rem;
-  margin: 2em 0;
+  margin: 1rem 0;
   border-left-width: 0.5rem;
   border-left-style: solid;
-  position: relative;
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
-  margin: 1rem 0;
+ 
 }
 .custom-block::before {
   position: absolute;
   top: 19px;
   left: -14px;
-  color: #fff;
   width: 20px;
   height: 20px;
-  border-radius: 100%;
   text-align: center;
   line-height: 20px;
-  font-weight: bold;
   font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
   font-size: 14px;
+  color: #fff;
+  border-radius: 100%;
 }
 .custom-block p {
   color: #222;
@@ -34,11 +34,11 @@
 }
 
 .custom-block.tip {
-  border-color: (--c-brand);
   background-color: #f3f5f7;
+  border-color: var(--c-brand);
 }
 .custom-block.tip::before {
-  content: url("/images/icons/bulb.svg");
+  content: var(--c-tip);
   width: 25px;
   height: 25px;
   left: -16px;
@@ -49,23 +49,23 @@
   border-color: #476582;
 }
 .custom-block.info::before {
-  content: url("/images/icons/info.svg");
+  content: var(--c-info);
   width: 25px;
   height: 25px;
-  left: -16px;
+
   box-sizing: border-box;
 }
 
 .custom-block.warning {
   border-color: #e7c000;
   color: #6b5900;
-  background-color: #ffe5644d
+  background-color: #ffe5644d;
 }
 .custom-block.warning .custom-block-title {
   color: #b29400
 }
 .custom-block.warning::before {
-  content: url("/images/icons/warning.svg");
+  content: var(--c-warn);
   width: 25px;
   height: 25px;
   left: -16px;
@@ -81,12 +81,15 @@
   color: #900
 }
 .custom-block.danger::before {
-  content: url("/images/icons/stop.svg");
+  content: var(--c-danger);
   width: 25px;
   height: 25px;
   left: -16px;
 }
-.custom-block.tip, .custom-block.info, .custom-block.warning, .custom-block.danger {
+.custom-block.tip, 
+.custom-block.info, 
+.custom-block.warning, 
+.custom-block.danger {
   overflow-x: initial !important;
 }
 .sidebar-group.is-sub-group > .sidebar-heading:not(.clickable) {
@@ -96,13 +99,14 @@
   opacity: 1 !important;
 }
 .badge {
-  background-color: #b00000;
-  font-size: 0.8rem;
-  border: 2px solid #b00000;
-  border-radius: 5px;
-  margin-right: 0.5rem;
-  color: #fff;
   padding: 0.25rem 0.25rem;
+  margin-right: 0.5rem;
+  background-color: #b00000;
+  border: 2px solid #b00000;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  color: #fff;
+
 }
 .dropdown-wrapper .nav-dropdown .dropdown-item h4 {
   margin-bottom: 0.3rem !important;

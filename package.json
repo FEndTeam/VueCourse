@@ -17,13 +17,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "vitepress": "^0.20.10"
+    "vitepress": "^0.21.3"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FEndTeam/VueCourse.git"
   },
-  "keywords": ["doc"],
+  "keywords": [
+    "doc"
+  ],
   "author": "YeungWanLum",
   "license": "ISC"
 }

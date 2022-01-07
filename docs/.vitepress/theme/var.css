@@ -72,3 +72,11 @@
   --code-inline-bg-color: rgba(27, 31, 35, 0.05);
   --code-bg-color: #282c34;
 }
+
+/** Image Styles */
+:root {
+  --c-tip: url("/images/icons/bulb.svg");
+  --c-warn: url("/images/icons/warning.svg");
+  --c-info: url("/images/icons/info.svg");
+  --c-danger: url("/images/icons/stop.svg");
+}
