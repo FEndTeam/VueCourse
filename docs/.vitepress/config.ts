@@ -48,6 +48,15 @@ function getGuideSidebar() {
         { text: '组件模板', link: '/syntax/component_template'},
         { text: '组件数据', link: '/syntax/component_data'},
         { text: '组件方法', link: '/syntax/component_method'},
+        { text: '模板指令', children: [
+          { text: '指令概述', link: '/syntax/directive_overview'},
+          { text: '数据渲染指令', link: '/syntax/directive_data'},
+          { text: '事件绑定指令', link: '/syntax/directive_event'},
+          { text: '条件渲染指令', link: '/syntax/directive_condition'},
+          { text: '列表渲染指令', link: '/syntax/directive_list'},
+          { text: '属性绑定指令', link: '/syntax/directive_attribute'},
+          { text: '表单绑定指令', link: '/syntax/directive_form'},
+        ]},
       ]
     },
 

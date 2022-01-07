@@ -34,7 +34,7 @@
 }
 
 .custom-block.tip {
-  background-color: #f3f5f7;
+  background-color: #e6f9f0;
   border-color: var(--c-brand);
 }
 .custom-block.tip::before {
@@ -59,7 +59,7 @@
 .custom-block.warning {
   border-color: #e7c000;
   color: #6b5900;
-  background-color: #ffe5644d;
+  background-color: #f3e6a54d;
 }
 .custom-block.warning .custom-block-title {
   color: #b29400
@@ -74,7 +74,7 @@
 .custom-block.danger {
   border-color: #c00;
   color: #4d0000;
-  background-color: #ffe6e6
+  background-color: #fff0f0
 }
 
 .custom-block.danger .custom-block-title {
