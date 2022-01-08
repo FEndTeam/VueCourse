@@ -25,15 +25,14 @@
 
   Pinia是一个用于 Vue 的轻量级状态管理库，类似于 Vuex， 是Vue项目中的其中一种状态管理方案，它易于学习，和Vuex的API极其相似。
 
-* **Kn. 3：Pinia和Vuex的异同点**
+* **Kn. 3：Pinia的特点**
 
-  * ⓵ 都是 Vue 的状态管理相关的库，Pinia和Vuex效率都非常高
-  * ⓶ Vuex使用的范围广，稳定性好，适合大型、高复杂度的项目
-  * ⓷ Vuex支持调试
-  * ⓸ Pinia有完整的TypeScript支持，且体积极其轻巧
-  * ⓹ Pinia允许开发者建立多个Store，不使用模块嵌套
-  * ⓺ Pinia使用Actions更新State或处理异步任务，删除了Mutations
-  * ⓻ Pinia使用的范围晓，稳定性弱，且步支持调试，适合中小型、低复杂度的项目
+  * ⓵ 完整的 typescript 的支持；
+  * ⓶ Pinia有完整的TypeScript支持，且体积极其轻巧
+  * ⓷ Pinia允许开发者建立多个Store，不使用模块嵌套
+  * ⓸ Pinia使用Actions更新State或处理异步任务，删除了Mutations
+  * ⓹ 无需手动添加 store，store 一旦创建便会自动添加；
+  * ⓺ 没有模块嵌套，只有 store 的概念，store 之间可以自由使用，更好的代码分割；
 :::
 
 ::: danger Note
