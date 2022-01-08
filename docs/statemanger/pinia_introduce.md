@@ -29,10 +29,9 @@
 
   * ⓵ 完整的 typescript 的支持；
   * ⓶ Pinia有完整的TypeScript支持，且体积极其轻巧
-  * ⓷ Pinia允许开发者建立多个Store，不使用模块嵌套
+  * ⓷ 没有模块嵌套，只有 store 的概念，store 之间可以自由使用，更好的代码分割
   * ⓸ Pinia使用Actions更新State或处理异步任务，删除了Mutations
-  * ⓹ 无需手动添加 store，store 一旦创建便会自动添加；
-  * ⓺ 没有模块嵌套，只有 store 的概念，store 之间可以自由使用，更好的代码分割；
+  * ⓹ 无需手动添加 store，store 一旦创建便会自动添加
 :::
 
 ::: danger Note
