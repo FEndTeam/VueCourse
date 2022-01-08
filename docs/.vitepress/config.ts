@@ -56,6 +56,7 @@ function getGuideSidebar() {
           { text: '列表渲染指令', link: '/syntax/directive_list'},
           { text: '属性绑定指令', link: '/syntax/directive_attribute'},
           { text: '表单绑定指令', link: '/syntax/directive_form'},
+          { text: '自定义指令', link: '/syntax/directive_custorm'},
         ]},
       ]
     },
