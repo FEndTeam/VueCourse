@@ -38,43 +38,56 @@ function getGuideSidebar() {
     {
       text: "基础语法",
       children: [
-        { text: '简单介绍', link: '/syntax/introduce'},
-        { text: '基本结构', link: '/syntax/basic-use'},
-        { text: '组件化', children: [
-          { text: '组件概述', link: '/syntax/component_overview'},
-          { text: '全局组件', link: '/syntax/component_global'},
-          { text: '局部组件', link: '/syntax/component_partial'},
-        ]},
-        { text: '组件模板', link: '/syntax/component_template'},
-        { text: '组件数据', link: '/syntax/component_data'},
-        { text: '组件方法', link: '/syntax/component_method'},
-        { text: '模板指令', children: [
-          { text: '指令概述', link: '/syntax/directive_overview'},
-          { text: '数据渲染指令', link: '/syntax/directive_data'},
-          { text: '事件绑定指令', link: '/syntax/directive_event'},
-          { text: '条件渲染指令', link: '/syntax/directive_condition'},
-          { text: '列表渲染指令', link: '/syntax/directive_list'},
-          { text: '属性绑定指令', link: '/syntax/directive_attribute'},
-          { text: '表单绑定指令', link: '/syntax/directive_form'},
-          { text: '自定义指令', link: '/syntax/directive_custorm'},
-        ]},
+        { text: '简单介绍', link: '/syntax/introduce' },
+        { text: '基本结构', link: '/syntax/basic-use' },
+        {
+          text: '组件化', children: [
+            { text: '组件概述', link: '/syntax/component_overview' },
+            { text: '全局组件', link: '/syntax/component_global' },
+            { text: '局部组件', link: '/syntax/component_partial' },
+          ]
+        },
+        { text: '组件模板', link: '/syntax/component_template' },
+        { text: '组件数据', link: '/syntax/component_data' },
+        { text: '组件方法', link: '/syntax/component_method' },
+        {
+          text: '模板指令', children: [
+            { text: '指令概述', link: '/syntax/directive_overview' },
+            { text: '数据渲染指令', link: '/syntax/directive_data' },
+            { text: '事件绑定指令', link: '/syntax/directive_event' },
+            { text: '条件渲染指令', link: '/syntax/directive_condition' },
+            { text: '列表渲染指令', link: '/syntax/directive_list' },
+            { text: '属性绑定指令', link: '/syntax/directive_attribute' },
+            { text: '表单绑定指令', link: '/syntax/directive_form' },
+            { text: '自定义指令', link: '/syntax/directive_custorm' },
+          ]
+        },
+        {
+          text: '组件通信', children: [
+            { text: '通信概述', link: '/syntax/community_overview' },
+            { text: '父子通信', link: '/syntax/community_fatherson' },
+            { text: '子父通信', link: '/syntaxcommunity_sonfather' },
+            { text: '兄弟通信', link: '/syntax/community_brotherhood' },
+            { text: '跨级通信', link: '/syntax/community_grandparent' },
+          ]
+        },
       ]
     },
 
     {
       text: '脚手架',
       children: [
-        { text: '脚手架简介', link: '/scaffold/introduce'},
-        { text: '项目创建', link: '/scaffold/create-project'},
-        { text: '路径别名', link: '/scaffold/alis'},
+        { text: '脚手架简介', link: '/scaffold/introduce' },
+        { text: '项目创建', link: '/scaffold/create-project' },
+        { text: '路径别名', link: '/scaffold/alis' },
       ]
     },
     {
       text: '路由管理器',
       children: [
-        { text: '单页面应用', link: '/routermanger/single-page-application'},
-        { text: '路由简单实现', link: '/routermanger/concept-principle-of-routing'},
-        { text: 'VueRouter简介', link: '/routermanger/introduce'},
+        { text: '单页面应用', link: '/routermanger/single-page-application' },
+        { text: '路由简单实现', link: '/routermanger/concept-principle-of-routing' },
+        { text: 'VueRouter简介', link: '/routermanger/introduce' },
       ]
     },
     {
