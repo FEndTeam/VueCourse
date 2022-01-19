@@ -101,6 +101,22 @@ function getGuideSidebar() {
           text: '配置Pinia',
           link: '/statemanger/pinia_config'
         },
+        {
+          text: 'Pinia中的state',
+          link: '/statemanger/pinia_state'
+        },
+        {
+          text: 'Pinia中的getters',
+          link: '/statemanger/pinia_getters'
+        },
+        {
+          text: 'Pinia中的actions',
+          link: '/statemanger/pinia_actions'
+        },
+        {
+          text: '数据持久化',
+          link: '/statemanger/pinia_persist'
+        },
       ]
     },
     {
