@@ -48,6 +48,7 @@ export default defineConfigWithTheme<Config>({
   title: 'JavaScript',
   description: 'JavaScript - 网页交互语言',
   scrollOffset: 'header',
+  base: "/VueCourse",
 
   head: [
     [
