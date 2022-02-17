@@ -48,7 +48,7 @@ export default defineConfigWithTheme<Config>({
   title: 'Vue.js',
   description: 'vue.js - 渐进式JavaScript框架',
   scrollOffset: 'header',
-  base: "/VueCourse",
+  base: "/VueCourse/",
 
   head: [
     [
