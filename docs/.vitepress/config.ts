@@ -35,9 +35,6 @@ export const sidebar = {
         {
           text: '快速开始',
           link: '/guide/quick-start'
-        },{
-          text: 'asdfsdf',
-          link: '/guide/aaa.md'
         }
       ]
     },
