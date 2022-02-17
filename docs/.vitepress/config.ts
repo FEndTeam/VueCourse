@@ -27,7 +27,7 @@ const nav = [
 ]
 
 export const sidebar = {
-  '/guide/': [
+  '/guide': [
     {
       text: '开始',
       items: [
@@ -45,10 +45,10 @@ export const sidebar = {
 export default defineConfigWithTheme<Config>({
   extends: baseConfig as () => UserConfig<Config>,
   lang: 'zh-CN',
-  title: 'JavaScript',
-  description: 'JavaScript - 网页交互语言',
+  title: 'vue.js',
+  description: 'vue.js - 渐进式JavaScript框架',
   scrollOffset: 'header',
-  base: "/VueCourse",
+  base: "/VueCourse/",
 
   head: [
     [
