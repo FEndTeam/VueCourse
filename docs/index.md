@@ -35,13 +35,9 @@ page: true
 </section>
 
 <style scoped>
+  
 section {
   padding: 42px 32px;
-}
-
-# hero {
-  padding: 96px 32px;
-  text-align: center;
 }
 
 .tagline {

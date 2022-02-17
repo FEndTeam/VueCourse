@@ -9,6 +9,12 @@
 .actions {
   text-align: center;
 }
+
+#hero {
+  padding: 96px 32px;
+  text-align: center;
+}
+
 #special-sponsor {
   border-top: 1px solid var(--vt-c-divider-light);
   border-bottom: 1px solid var(--vt-c-divider-light);
