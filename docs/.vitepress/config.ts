@@ -1,159 +1,206 @@
-export default {
-  lang: 'en-US',
-  title: 'Vue Doc',
-  description: 'Vue3.x technical documentation',
-  base: "/VueCourse",
-  // markdown文件设置
-  markdown: {
-    lineNumbers: true
-  },
-  themeConfig: {
-    // 设置文档所在的文件夹
-    docsDir: 'docs',
-    // 是否展示 可编辑文档
-    editLinks: true,
-    // 搜索插件
-    algolia: {
-      apiKey: 'c57105e511faa5558547599f120ceeba',
-      indexName: 'vitepress'
-    },
-    // 顶部导航
-    nav: [
-      { text: 'Guide', link: '/', activeMatch: '^/$|^/guide/' },
+import fs from 'fs'
+import path from 'path'
+import { defineConfigWithTheme } from 'vitepress'
+import baseConfig from '@vue/theme/config'
+import { headerPlugin } from './headerMdPlugin'
+import type { Config } from '@vue/theme'
+import { UserConfig } from 'vitepress'
+
+const nav = [
+  {
+    text: '关于',
+    activeMatch: `^/about/`,
+    items: [
+      { text: 'FAQ', link: '/about/faq' },
+      { text: '团队', link: '/about/team' },
+      { text: '版本发布', link: '/about/releases' },
       {
-        text: 'Config Reference',
-        link: '/config/basics',
-        activeMatch: '^/config/'
+        text: '社区指南',
+        link: '/about/community-guide'
       }
+    ]
+  },
+  {
+    text: '赞助者',
+    link: '/sponsor/'
+  }
+]
+
+export const sidebar = {
+  '/guide/': [
+    {
+      text: '开始',
+      items: [
+        { text: '简介', link: '/guide/introduction' },
+        {
+          text: '快速开始',
+          link: '/guide/quick-start'
+        },{
+          text: 'asdfsdf',
+          link: '/guide/aaa.md'
+        }
+      ]
+    },
+  ],
+ 
+}
+
+export default defineConfigWithTheme<Config>({
+  extends: baseConfig as () => UserConfig<Config>,
+  lang: 'zh-CN',
+  title: 'JavaScript',
+  description: 'JavaScript - 网页交互语言',
+  scrollOffset: 'header',
+
+  head: [
+    [
+      'script',
+      {},
+      fs.readFileSync(
+        path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
+        'utf-8'
+      )
+    ]
+  ],
+
+  themeConfig: {
+    nav,
+    sidebar,
+    algolia: {
+      indexName: 'vuejs',
+      appId: 'ML0LEBN7FQ',
+      apiKey: 'f49cbd92a74532cc55cfbffa5e5a7d01',
+      searchParameters: {
+        facetFilters: ['version:v3']
+      }
+    },
+
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/vuejs/' },
+      { icon: 'twitter', link: 'https://twitter.com/vuejs' },
+      { icon: 'discord', link: 'https://discord.com/invite/HBherRA' }
     ],
-    // 侧边栏导航
-    sidebar: {
-      '/': getGuideSidebar()
+
+    editLink: {
+      repo: 'vuejs-translations/docs-zh-cn',
+      text: '在 GitHub 上编辑此页'
+    },
+
+    footer: {
+      license: {
+        text: 'Apache  License',
+        link: 'https://opensource.org/licenses/Apache'
+      },
+      copyright: `Copyright © 2016-${new Date().getFullYear()} Yeung WanLum`
     }
+  },
+
+  markdown: {
+    config(md) {
+      md.use(headerPlugin)
+    }
+  },
+
+  vite: {
+    define: {
+      __VUE_OPTIONS_API__: false
+    },
+    optimizeDeps: {
+      include: ['gsap', 'dynamics.js'],
+      exclude: ['@vue/repl']
+    },
+    // @ts-ignore
+    ssr: {
+      external: ['@vue/repl']
+    },
+    server: {
+      host: true,
+      fs: {
+        // for when developing with locally linked theme
+        allow: ['../..']
+      }
+    },
+    build: {
+      minify: 'terser',
+      chunkSizeWarningLimit: Infinity,
+      rollupOptions: {
+        output: {
+          chunkFileNames: 'assets/chunks/[name].[hash].js',
+          manualChunks(id, ctx) {
+            if (id.includes('gsap')) {
+              return 'gsap'
+            }
+            if (id.includes('dynamics.js')) {
+              return 'dynamics'
+            }
+            return moveToVendor(id, ctx)
+          }
+        }
+      }
+    },
+    json: {
+      stringify: true
+    }
+  },
+
+  vue: {
+    reactivityTransform: true
+  }
+})
+
+const cache = new Map<string, boolean>()
+
+/**
+ * This is temporarily copied from Vite - which should be exported in a
+ * future release.
+ *
+ * @TODO when this is exported by Vite, VitePress should ship a better
+ * manual chunk strategy to split chunks for deps that are imported by
+ * multiple pages but not all.
+ */
+function moveToVendor(id: string, { getModuleInfo }: any) {
+  if (
+    id.includes('node_modules') &&
+    !/\.css($|\\?)/.test(id) &&
+    staticImportedByEntry(id, getModuleInfo, cache)
+  ) {
+    return 'vendor'
   }
 }
 
-function getGuideSidebar() {
-  return [
-    {
-      text: "基础语法",
-      children: [
-        { text: '简单介绍', link: '/syntax/introduce' },
-        { text: '基本结构', link: '/syntax/basic-use' },
-        {
-          text: '组件化', children: [
-            { text: '组件概述', link: '/syntax/component_overview' },
-            { text: '全局组件', link: '/syntax/component_global' },
-            { text: '局部组件', link: '/syntax/component_partial' },
-          ]
-        },
-        { text: '组件模板', link: '/syntax/component_template' },
-        { text: '组件数据', link: '/syntax/component_data' },
-        { text: '组件方法', link: '/syntax/component_method' },
-        {
-          text: '模板指令', children: [
-            { text: '指令概述', link: '/syntax/directive_overview' },
-            { text: '数据渲染指令', link: '/syntax/directive_data' },
-            { text: '事件绑定指令', link: '/syntax/directive_event' },
-            { text: '条件渲染指令', link: '/syntax/directive_condition' },
-            { text: '列表渲染指令', link: '/syntax/directive_list' },
-            { text: '属性绑定指令', link: '/syntax/directive_attribute' },
-            { text: '表单绑定指令', link: '/syntax/directive_form' },
-            { text: '自定义指令', link: '/syntax/directive_custorm' },
-          ]
-        },
-        {
-          text: '组件通信', children: [
-            { text: '通信概述', link: '/syntax/community_overview' },
-            { text: '父子通信', link: '/syntax/community_fatherson' },
-            { text: '子父通信', link: '/syntaxcommunity_sonfather' },
-            { text: '兄弟通信', link: '/syntax/community_brotherhood' },
-            { text: '跨级通信', link: '/syntax/community_grandparent' },
-          ]
-        },
-      ]
-    },
+function staticImportedByEntry(
+  id: string,
+  getModuleInfo: any,
+  cache: Map<string, boolean>,
+  importStack: string[] = []
+): boolean {
+  if (cache.has(id)) {
+    return cache.get(id) as boolean
+  }
+  if (importStack.includes(id)) {
+    // circular deps!
+    cache.set(id, false)
+    return false
+  }
+  const mod = getModuleInfo(id)
+  if (!mod) {
+    cache.set(id, false)
+    return false
+  }
 
-    {
-      text: '脚手架',
-      children: [
-        { text: '脚手架简介', link: '/scaffold/introduce' },
-        { text: '项目创建', link: '/scaffold/create-project' },
-        { text: '路径别名', link: '/scaffold/alis' },
-      ]
-    },
-    {
-      text: '路由管理器',
-      children: [
-        { text: '单页面应用', link: '/routermanger/single-page-application' },
-        { text: '路由简单实现', link: '/routermanger/concept-principle-of-routing' },
-        { text: 'VueRouter简介', link: '/routermanger/introduce' },
-      ]
-    },
-    {
-      text: '状态管理器',
-      children: [
-        {
-          text: '概述',
-          link: '/statemanger/pinia_introduce'
-        },
-        {
-          text: '配置Pinia',
-          link: '/statemanger/pinia_config'
-        },
-        {
-          text: 'Pinia中的state',
-          link: '/statemanger/pinia_state'
-        },
-        {
-          text: 'Pinia中的getters',
-          link: '/statemanger/pinia_getters'
-        },
-        {
-          text: 'Pinia中的actions',
-          link: '/statemanger/pinia_actions'
-        },
-        {
-          text: '数据持久化',
-          link: '/statemanger/pinia_persist'
-        },
-      ]
-    },
-    {
-      text: '服务端渲染',
-      children: [
-        {
-          text: '概述',
-          link: '/serverrender/introduce'
-        },
-      ]
-    }
-  ]
+  if (mod.isEntry) {
+    cache.set(id, true)
+    return true
+  }
+  const someImporterIs = mod.importers.some((importer: string) =>
+    staticImportedByEntry(
+      importer,
+      getModuleInfo,
+      cache,
+      importStack.concat(id)
+    )
+  )
+  cache.set(id, someImporterIs)
+  return someImporterIs
 }
-
-// 历史的发展
-// 单页面应用
-// 介绍Vue
-// 组件
-// 组件的data -->
-// 组件的模板 --> 模板里面的指令
-// 组件的方法 -->
-// 组件的计算属性
-// 组件的侦听器
-// 组件的插槽
-// 组件的生命周期
-// 组件之间的通信
-// 组件的动效
-
-/** 
-⓵
-⓶
-⓷
-⓸
-⓹
-⓺
-⓻
-⓼
-⓽
-⓾
-*/

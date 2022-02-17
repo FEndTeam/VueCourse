@@ -11,14 +11,27 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": " vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@vue/theme": "^1.0.1",
-    "vitepress": "^0.21.6"
+    "@vue/repl": "^0.4.9",
+    "@vue/theme": "^0.1.42",
+    "dynamics.js": "^1.1.5",
+    "gsap": "^3.9.0",
+    "vitepress": "^0.22.2",
+    "vue": "^3.2.27"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^16.9.1",
+    "chalk": "^4.1.2",
+    "gray-matter": "^4.0.3",
+    "lodash": "^4.17.21",
+    "open": "^8.4.0",
+    "patch-vue-directive-ssr": "^0.0.1"
   },
   "repository": {
     "type": "git",
