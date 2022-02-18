@@ -13,7 +13,6 @@ export default Object.assign({}, VPTheme, {
     // @ts-ignore
     return h(VPTheme.Layout, null, {
       banner: () => h(Banner),
-      // 'sidebar-top': () => h(PreferenceSwitch)
     })
   },
   enhanceApp({ app }: { app: App }) {

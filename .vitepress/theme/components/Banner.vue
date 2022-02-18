@@ -20,7 +20,7 @@ function dismiss() {
 
 <template>
   <div class="banner" v-if="open">
-    持续编写中 - 仅供预览
+    持续编写中 - 仅供预览!
   </div>
 </template>
 
