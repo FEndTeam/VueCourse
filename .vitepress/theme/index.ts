@@ -1,4 +1,4 @@
-import './styles/index.css'
+// import './styles/index.css'
 import { h, App } from 'vue'
 import { VPTheme } from '@vue/theme'
 import Banner from './components/Banner.vue'

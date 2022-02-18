@@ -31,18 +31,24 @@ const nav = [
 ]
 
 export const sidebar = {
-  '/guide/': [
+  '/syntax/': [
     {
-      text: 'Getting Started',
+      text: '基础语法',
       items: [
-        { text: 'Introduction', link: '/guide/introduction' },
-        {
-          text: 'Quick Start',
-          link: '/guide/quick-start'
-        }
+        { text: '基本介绍', link: '/syntax/introduction' },
+        { text: '快速开始', link: '/syntax/quick-start'}
       ]
     }
   ],
+  // '/scaffold/': [
+  //   {
+  //     text: '脚手架',
+  //     items: [
+  //       { text: '基本介绍',  },
+  //       { text: '快速开始', }
+  //     ]
+  //   }
+  // ],
 }
 
 export default defineConfigWithTheme<Config>({

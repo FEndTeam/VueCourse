@@ -8,7 +8,7 @@
       一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。
     </p>
     <p class="actions">
-      <a class="get-started" href="/guide/introduction.html">
+      <a class="get-started" href="/syntax/introduction.html">
       快速开始
         <svg
           class="icon"
@@ -22,7 +22,7 @@
           />
         </svg>
       </a>
-      <a class="setup" href="/guide/quick-start.html">安装</a>
+      <a class="setup" href="/syntax/quick-start.html">安装</a>
     </p>
   </section>
 
