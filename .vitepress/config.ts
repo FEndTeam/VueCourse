@@ -62,6 +62,7 @@ export default defineConfigWithTheme<Config>({
   extends: baseConfig as () => UserConfig<Config>,
 
   lang: 'en-US',
+  
   title: 'Vue.js',
   description: 'Vue.js - The Progressive JavaScript Framework',
   srcDir: 'docs',
@@ -106,7 +107,6 @@ export default defineConfigWithTheme<Config>({
   themeConfig: {
     nav,
     sidebar,
-
     algolia: {
       indexName: 'vuejs',
       appId: 'ML0LEBN7FQ',
