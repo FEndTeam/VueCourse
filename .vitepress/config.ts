@@ -62,7 +62,7 @@ export default defineConfigWithTheme<Config>({
   extends: baseConfig as () => UserConfig<Config>,
 
   lang: 'en-US',
-  
+  base:"/VueCourse",
   title: 'Vue.js',
   description: 'Vue.js - The Progressive JavaScript Framework',
   srcDir: 'docs',
