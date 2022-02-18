@@ -11,11 +11,6 @@ const nav = [
     text: 'Docs',
     activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
     items: [
-      { text: 'Guide', link: '/guide/introduction' },
-      { text: 'Tutorial', link: '/tutorial/' },
-      { text: 'Examples', link: '/examples/' },
-      { text: 'Quick Start', link: '/guide/quick-start' },
-      { text: 'Style Guide', link: '/style-guide/' },
       {
         text: 'Migration from Vue 2',
         link: 'https://v3-migration.vuejs.org/'
@@ -26,14 +21,6 @@ const nav = [
     text: 'About',
     activeMatch: `^/about/`,
     items: [
-      { text: 'FAQ', link: '/about/faq' },
-      { text: 'Team', link: '/about/team' },
-      { text: 'Releases', link: '/about/releases' },
-      {
-        text: 'Community Guide',
-        link: '/about/community-guide'
-      },
-      { text: 'Code of Conduct', link: '/about/coc' },
       {
         text: 'The Documentary',
         link: 'https://www.youtube.com/watch?v=OrxmtDw4pVI'
