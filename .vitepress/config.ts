@@ -53,7 +53,6 @@ export default defineConfigWithTheme<Config>({
   title: 'Vue.js',
   description: 'Vue.js - The Progressive JavaScript Framework',
   srcDir: 'docs',
-  // srcExclude: ['tutorial/**/description.md'],
   scrollOffset: 'header',
 
   head: [
@@ -110,7 +109,7 @@ export default defineConfigWithTheme<Config>({
     ],
 
     editLink: {
-      repo: 'vuejs/docs',
+      repo: 'https://github.com/FEndTeam/VueCourse/docs',
       text: 'Edit this page on GitHub'
     },
 
