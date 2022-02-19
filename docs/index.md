@@ -2,10 +2,6 @@
 page: true
 ---
 
-<script setup>
-import NewsLetter from '/@theme/components/NewsLetter.vue'
-</script>
-
 <section id="hero">
   <h1 class="tagline">
     <span class="accent">渐进式</span><br> JavaScript 框架
@@ -17,18 +13,6 @@ import NewsLetter from '/@theme/components/NewsLetter.vue'
     <a class="get-started" href="/guide/introduction.html">快速开始 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg></a>
     <a class="setup" href="/guide/quick-start.html">安装</a>
   </p>
-</section>
-
-<!-- TODO make dynamic based on data -->
-<section id="special-sponsor">
-  <span>特别赞助</span>
-  <a href="#">
-    <picture>
-      <source type="image/avif" srcset="/images/sponsors/hbuilder.avif">
-      <img alt="hbuilder logo" width="97" height="36" src="/images/sponsors/hbuilder.png">
-    </picture>
-  </a>
-  <span>为 Vue 打造的先进 IDE</span>
 </section>
 
 <section id="highlights" class="vt-box-container">
@@ -46,10 +30,6 @@ import NewsLetter from '/@theme/components/NewsLetter.vue'
   </div>
 </section>
 
-<section id="sponsors">
-  <!-- TODO -->
-</section>
-
 <section id="ways-to-use">
   <!-- TODO show toggleable example between CDN vs. SFC usage -->
 </section>
@@ -58,16 +38,9 @@ import NewsLetter from '/@theme/components/NewsLetter.vue'
   <!-- TODO show tooling screenshots -->
 </section>
 
-<NewsLetter />
-
 <style scoped>
 section {
   padding: 42px 32px;
-}
-
-#hero {
-  padding: 96px 32px;
-  text-align: center;
 }
 
 .tagline {
@@ -150,14 +123,19 @@ html:not(.dark) .accent, .dark .tagline {
   background-color: var(--vt-c-gray-dark-3);
 }
 
-#special-sponsor {
+body #hero {
+  padding: 96px 32px;
+  text-align: center;
+}
+
+body #special-sponsor {
   border-top: 1px solid var(--vt-c-divider-light);
   border-bottom: 1px solid var(--vt-c-divider-light);
   padding: 12px 24px;
   text-align: center;
 }
 
-#special-sponsor span {
+body #special-sponsor span {
   color: var(--vt-c-text-2);
   font-weight: 500;
   font-size: 13px;
@@ -165,7 +143,7 @@ html:not(.dark) .accent, .dark .tagline {
   margin: 0 24px;
 }
 
-#special-sponsor img {
+body #special-sponsor img {
   display: inline-block;
   vertical-align: middle;
   height: 36px;
@@ -175,13 +153,13 @@ html:not(.dark) .accent, .dark .tagline {
   filter: grayscale(1) invert(1);
 }
 
-#highlights {
+body #highlights {
   max-width: 960px;
   margin: 0px auto;
   color: var(--vt-c-text-2);
 }
 
-#highlights h2 {
+body #highlights h2 {
   font-weight: 600;
   font-size: 20px;
   letter-spacing: -0.4px;
@@ -190,12 +168,12 @@ html:not(.dark) .accent, .dark .tagline {
   margin-bottom: 0.75em;
 }
 
-#highlights p {
+body #highlights p {
   font-weight: 400;
   font-size: 15px;
 }
 
-#highlights .vt-box {
+body #highlights .vt-box {
   background-color: transparent;
 }
 
