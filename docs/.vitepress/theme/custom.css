@@ -1,0 +1,24 @@
+.vt-doc .custom-block:before {
+  font-size: 20px !important;
+  top: 18px;
+}
+
+.vt-doc .custom-block.tip:before {
+  content: '🇴' !important;
+  top: 18px;
+}
+
+.vt-doc .custom-block.warning:before {
+  content: '🇵' !important;
+  top: 18px;
+}
+
+.vt-doc .custom-block.info:before {
+  content: '🇪' !important;
+  top: 18px;
+}
+
+.vt-doc .custom-block.danger:before {
+  content: '🇳' !important;
+  top: 18px;
+}

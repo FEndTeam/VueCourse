@@ -32,14 +32,18 @@ const nav = [
 ]
 
 export const sidebar = {
-  '/guide/': [
+  '/syntax/': [
     {
       text: '开始',
       items: [
-        { text: '简介', link: '/guide/introduction' },
+        { text: '简介', link: '/syntax/introduction' },
         {
           text: '快速开始',
-          link: '/guide/quick-start'
+          link: '/syntax/quick-start'
+        },
+        {
+          text: '示例程序',
+          link: '/syntax/aaa'
         }
       ]
     }

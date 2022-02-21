@@ -10,8 +10,8 @@ page: true
     一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。
   </p>
   <p class="actions">
-    <a class="get-started" href="/guide/introduction.html">快速开始 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg></a>
-    <a class="setup" href="/guide/quick-start.html">安装</a>
+    <a class="get-started" href="/syntax/introduction.html">快速开始 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg></a>
+    <a class="setup" href="/syntax/quick-start.html">安装</a>
   </p>
 </section>
 
@@ -28,10 +28,6 @@ page: true
     <h2>功能丰富</h2>
     <p>拥有丰富的、可渐进式集成的生态系统，可以根据规模在仅使用一个库和使用整套框架间切换自如。</p>
   </div>
-</section>
-
-<section id="ways-to-use">
-  <!-- TODO show toggleable example between CDN vs. SFC usage -->
 </section>
 
 <section id="tooling">
