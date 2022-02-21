@@ -1,24 +1,41 @@
 .vt-doc .custom-block:before {
-  font-size: 20px !important;
-  top: 18px;
+  font-size: 23px !important;
+  top: 14px !important;
+  left: 12px !important;
 }
 
 .vt-doc .custom-block.tip:before {
-  content: '🇴' !important;
-  top: 18px;
+  content: 'Ⓞ' !important;
+}
+
+.vt-doc .custom-block.tip .custom-block-title {
+  color: #42b883;
 }
 
 .vt-doc .custom-block.warning:before {
-  content: '🇵' !important;
-  top: 18px;
+  content: 'Ⓟ' !important;
+}
+
+.vt-doc .custom-block.warning .custom-block-title {
+  color: #ffc517;
 }
 
 .vt-doc .custom-block.info:before {
-  content: '🇪' !important;
-  top: 18px;
+  content: 'Ⓔ' !important;
+  color: #658aa0;
+}
+
+.vt-doc .custom-block.info {
+  border: 1px solid #658aa0;
+}
+
+.vt-doc .custom-block.info .custom-block-title {
+  color: #658aa0;
 }
 
 .vt-doc .custom-block.danger:before {
-  content: '🇳' !important;
-  top: 18px;
+  content: 'Ⓝ' !important;
+}
+.vt-doc .custom-block.danger .custom-block-title {
+  color: #ed3c50;
 }
