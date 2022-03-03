@@ -84,7 +84,7 @@
 }
 
 .custom-block.danger .custom-block-title {
-  color: #900
+  color: #c00;
 }
 .custom-block.danger::before {
   content: var(--c-danger);
