@@ -1,216 +1,57 @@
-import fs from 'fs'
-import path from 'path'
-import { defineConfigWithTheme } from 'vitepress'
-import baseConfig from '@vue/theme/config'
-import { headerPlugin } from './headerMdPlugin'
-import type { Config } from '@vue/theme'
-import { UserConfig } from 'vitepress'
-
-const nav = [
-  {
-    text: '关于',
-    activeMatch: `^/about/`,
-    items: [
-      { text: 'FAQ', link: '/about/faq' },
-      { text: '团队', link: '/about/team' },
-      { text: '版本发布', link: '/about/releases' },
-      {
-        text: '社区指南',
-        link: '/about/community-guide'
-      },
-      { text: '行为准则', link: '/about/coc' },
-      {
-        text: '纪录片',
-        link: 'https://www.youtube.com/watch?v=OrxmtDw4pVI'
-      }
-    ]
-  },
-  {
-    text: '赞助者',
-    link: '/sponsor/'
-  }
-]
-
-export const sidebar = {
-  '/syntax/': [
-    {
-      text: '开始',
-      items: [
-        { text: '简介', link: '/syntax/introduction' },
-        {
-          text: '快速开始',
-          link: '/syntax/quick-start'
-        },
-        {
-          text: '示例程序',
-          link: '/syntax/aaa'
-        }
-      ]
-    }
-  ],
-}
-
-export default defineConfigWithTheme<Config>({
-  extends: baseConfig as () => UserConfig<Config>,
-  lang: 'zh-CN',
-  title: 'Vue.js',
-  description: 'Vue.js - 渐进式的 JavaScript 框架',
-  // srcExclude: ['tutorial/**/description.md'],
-  scrollOffset: 'header',
-
-  head: [
-    ['meta', { name: 'twitter:site', content: '@vuejs' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    [
-      'meta',
-      {
-        name: 'twitter:image',
-        content: 'https://vuejs.org/images/logo.png'
-      }
-    ],
-    [
-      'script',
-      {},
-      fs.readFileSync(
-        path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
-        'utf-8'
-      )
-    ]
-  ],
-
-  themeConfig: {
-    nav,
-    sidebar,
-  
-    algolia: {
-      indexName: 'vuejs',
-      appId: 'ML0LEBN7FQ',
-      apiKey: 'f49cbd92a74532cc55cfbffa5e5a7d01',
-      searchParameters: {
-        facetFilters: ['version:v3']
-      }
-    },
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/' },
-      { icon: 'twitter', link: 'https://twitter.com/vuejs' },
-      { icon: 'discord', link: 'https://discord.com/invite/HBherRA' }
-    ],
-
-    footer: {
-      license: {
-        text: 'Apache License',
-        link: 'https://opensource.org/licenses/Apache'
-      },
-      copyright: `Copyright © 2016-${new Date().getFullYear()} Yeung WanLum`
-    }
-  },
-
+export default {
+  lang: 'en-US',
+  title: 'Vue Doc',
+  description: 'Vue3.x technical documentation',
+  base: "/VueCourse",
+  // markdown文件设置
   markdown: {
-    config(md) {
-      md.use(headerPlugin)
-    }
+    lineNumbers: true
   },
-
-  vite: {
-    define: {
-      __VUE_OPTIONS_API__: false
+  themeConfig: {
+    // 设置文档所在的文件夹
+    docsDir: 'docs',
+    // 搜索插件
+    algolia: {
+      apiKey: 'c57105e511faa5558547599f120ceeba',
+      indexName: 'vitepress'
     },
-    optimizeDeps: {
-      include: ['gsap', 'dynamics.js'],
-      exclude: ['@vue/repl']
-    },
-    // @ts-ignore
-    ssr: {
-      external: ['@vue/repl']
-    },
-    server: {
-      host: true,
-      fs: {
-        // for when developing with locally linked theme
-        allow: ['../..']
+    // 顶部导航
+    nav: [
+      { text: 'Guide', link: '/', activeMatch: '^/$|^/guide/' },
+      {
+        text: 'Config Reference',
+        link: '/config/basics',
+        activeMatch: '^/config/'
       }
-    },
-    build: {
-      minify: 'terser',
-      chunkSizeWarningLimit: Infinity,
-      rollupOptions: {
-        output: {
-          chunkFileNames: 'assets/chunks/[name].[hash].js',
-          manualChunks(id, ctx) {
-            if (id.includes('gsap')) {
-              return 'gsap'
-            }
-            if (id.includes('dynamics.js')) {
-              return 'dynamics'
-            }
-            return moveToVendor(id, ctx)
-          }
-        }
-      }
-    },
-    json: {
-      stringify: true
+    ],
+    // 侧边栏导航
+    sidebar: {
+      '/': getGuideSidebar()
     }
-  },
-
-  vue: {
-    reactivityTransform: true
-  }
-})
-
-const cache = new Map<string, boolean>()
-
-/**
- * This is temporarily copied from Vite - which should be exported in a
- * future release.
- *
- * @TODO when this is exported by Vite, VitePress should ship a better
- * manual chunk strategy to split chunks for deps that are imported by
- * multiple pages but not all.
- */
-function moveToVendor(id: string, { getModuleInfo }: any) {
-  if (
-    id.includes('node_modules') &&
-    !/\.css($|\\?)/.test(id) &&
-    staticImportedByEntry(id, getModuleInfo, cache)
-  ) {
-    return 'vendor'
   }
 }
 
-function staticImportedByEntry(
-  id: string,
-  getModuleInfo: any,
-  cache: Map<string, boolean>,
-  importStack: string[] = []
-): boolean {
-  if (cache.has(id)) {
-    return cache.get(id) as boolean
-  }
-  if (importStack.includes(id)) {
-    // circular deps!
-    cache.set(id, false)
-    return false
-  }
-  const mod = getModuleInfo(id)
-  if (!mod) {
-    cache.set(id, false)
-    return false
-  }
-
-  if (mod.isEntry) {
-    cache.set(id, true)
-    return true
-  }
-  const someImporterIs = mod.importers.some((importer: string) =>
-    staticImportedByEntry(
-      importer,
-      getModuleInfo,
-      cache,
-      importStack.concat(id)
-    )
-  )
-  cache.set(id, someImporterIs)
-  return someImporterIs
+function getGuideSidebar() {
+  return [
+    {
+      text: "基础语法",
+      children: [
+        { text: '介绍', link: '/syntax/introduction' },
+      ]
+    },
+   
+  ]
 }
+
+/** 
+⓵
+⓶
+⓷
+⓸
+⓹
+⓺
+⓻
+⓼
+⓽
+⓾
+*/
