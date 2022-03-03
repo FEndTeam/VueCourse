@@ -8,43 +8,66 @@
   border: 1px solid;
   border-left-width: 0.5rem;
   border-left-style: solid;
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px; 
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px; 
 }
 .custom-block::before {
   position: absolute;
-  top: 19px;
-  left: -14px;
-  width: 20px;
-  height: 20px;
+  top: 17px;
+  left: -16px;
+  width: 25px;
+  height: 25px;
   text-align: center;
-  line-height: 26px;
+  line-height: 24px;
   font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 23px;
+  font-weight: bolder;
+  font-size: 18px;
   color: #fff;
-  border-radius: 100%;
+  border-radius: 50%;
 }
-.custom-block p {
-  color: #222;
-}
+
 .custom-block .custom-block-title {
   font-weight: 600;
   margin-bottom: -0.4rem;
 }
 
+.custom-block p {
+  color: #222;
+}
+
+/* tip */
 .custom-block.tip {
   border-color: var(--c-brand);
   background-color: #f7f7f7;
 }
+.custom-block.tip .custom-block-title {
+  color: var(--c-brand)
+}
 .custom-block.tip::before {
   content: var(--c-tip);
-  width: 25px;
-  height: 25px;
-  left: -16px;
   background-color: var(--c-brand);
 }
+/* end tip */
 
+
+/* warning */
+.custom-block.warning {
+  border-color: #c4a301;
+  background-color: #f7f7f7;
+}
+.custom-block.warning .custom-block-title {
+  color: #c4a301;
+}
+.custom-block.warning::before {
+  content: var(--c-warn);
+  font-size: 23px;
+  line-height: 26px;
+  background-color:#c4a301;
+}
+
+/* end warning */
+
+/* info */
 .custom-block.info {
   border-color: #476582;
   background-color: #f7f7f7;
@@ -55,44 +78,27 @@
 }
 .custom-block.info::before {
   content: var(--c-info);
-  width: 25px;
-  height: 25px;
   background-color:#476582;
-  box-sizing: border-box;
 }
 
-.custom-block.warning {
-  border-color: #e7c000;
-  color: #6b5900;
-  background-color: #f7f7f7;
-}
-.custom-block.warning .custom-block-title {
-  color: #b29400;
-}
-.custom-block.warning::before {
-  content: var(--c-warn);
-  width: 25px;
-  height: 25px;
-  left: -16px;
-  box-sizing: border-box;
-  background-color:#e7c000;
-}
+/* end info */
+
+/* danger */
 .custom-block.danger {
   border-color: #c00;
-  color: #4d0000;
   background-color: #f7f7f7;
 }
-
 .custom-block.danger .custom-block-title {
   color: #c00;
 }
 .custom-block.danger::before {
   content: var(--c-danger);
-  width: 25px;
-  height: 25px;
-  left: -16px;
   background-color: #c00;
 }
+
+/* end danger */
+
+
 .custom-block.tip, 
 .custom-block.info, 
 .custom-block.warning, 
