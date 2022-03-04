@@ -53,6 +53,7 @@
 /* warning */
 .custom-block.warning {
   border-color: #c4a301;
+  color: #222;
   background-color: #f7f7f7;
 }
 .custom-block.warning .custom-block-title {

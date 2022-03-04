@@ -13,7 +13,8 @@
   <!-- 挂载元素 -->
   <div id="app">
     <!-- 根组件 -->
-    <App></App>
+    <!-- <App></App> -->
+    <root></root>
   </div>
 
   <!-- 引入 Vue库文件 -->
@@ -23,16 +24,8 @@
     let app = Vue.createApp({});
 
     // 创建 根组件
-    app.component('App', {
-      template: `
-      <div>Hello Vue</div>
-      <Children/>
-      `,
-      components: {
-        Children: {
-          template: "<h2>我是某一个组件的局部组件</h2>"
-        }
-      }
+    app.component('root', {
+      template: '<div>Hello Vue  {{Math.PI}}</div>'
     })
 
     // 把 app 挂载到 id 为 app的元素上

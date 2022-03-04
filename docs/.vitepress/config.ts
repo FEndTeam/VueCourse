@@ -5,7 +5,7 @@ export default {
   base: "/VueCourse",
   // markdown文件设置
   markdown: {
-    lineNumbers: true
+    lineNumbers: false
   },
   themeConfig: {
     // 设置文档所在的文件夹
@@ -36,7 +36,10 @@ function getGuideSidebar() {
     {
       text: "基础语法",
       children: [
-        { text: '介绍', link: '/syntax/introduction' },
+        { text: '基本介绍', link: '/syntax/introduction' },
+        { text: '快速开始', link: '/syntax/quick-start' },
+        { text: '简单应用', link: '/syntax/simple-app' },
+        { text: '模板语法', link: '/syntax/template-syntax' }
       ]
     },
    
