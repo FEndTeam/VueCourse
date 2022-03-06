@@ -1,10 +1,10 @@
 ---
 home: true
 heroImage: /images/hero.png
-heroAlt: 图形图像文档
+heroAlt: Vue3.x 全家桶文档
 heroText: Vue 3.x technical documentation
-tagline: Vue3.x组合API + 脚手架 + 路由 + 状态管理 + 服务端渲染
-actionText: Get Started
+tagline: Vue3.x 组合API + 脚手架 + 路由 + 状态管理 + 服务端渲染
+actionText: Get Started →
 actionLink: syntax/introduction
 features:
   - title: 保持分享
