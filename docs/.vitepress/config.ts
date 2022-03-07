@@ -39,7 +39,9 @@ function getGuideSidebar() {
         { text: '基本介绍', link: '/syntax/introduction' },
         { text: '快速开始', link: '/syntax/quick-start' },
         { text: '简单应用', link: '/syntax/simple-app' },
-        { text: '模板语法', link: '/syntax/template-syntax' }
+        { text: '模板语法', link: '/syntax/template-syntax' },
+        { text: '响应式状态', link: '/syntax/reactivity-state' },
+        { text: '响应式变量', link: '/syntax/reactive-variable' }
       ]
     },
    

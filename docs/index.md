@@ -2,7 +2,7 @@
 home: true
 heroImage: /images/hero.png
 heroAlt: Vue3.x 全家桶文档
-heroText: Vue 3.x technical documentation
+heroText: Vue3.x 全家桶文档
 tagline: Vue3.x 组合API + 脚手架 + 路由 + 状态管理 + 服务端渲染
 actionText: Get Started →
 actionLink: syntax/introduction

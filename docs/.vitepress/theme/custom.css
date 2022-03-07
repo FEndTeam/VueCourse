@@ -106,3 +106,12 @@
 .custom-block.danger {
   overflow-x: initial !important;
 }
+
+
+
+#main-title {
+  background: -webkit-linear-gradient(315deg,#42d392 25%,#647eff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
