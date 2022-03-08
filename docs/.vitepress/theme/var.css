@@ -73,8 +73,8 @@
   --code-bg-color: #282c34;
 }
 :root {
-  --c-tip: 'Ⓞ';
-  --c-warn:'Ⓢ';
-  --c-info: 'Ⓔ';
-  --c-danger: 'Ⓝ';
+  --c-tip: 'O';
+  --c-warn:'P';
+  --c-info: 'E';
+  --c-danger: 'N';
 }
