@@ -74,7 +74,7 @@
 }
 :root {
   --c-tip: 'Ⓞ';
-  --c-warn:'Ⓟ';
+  --c-warn:'Ⓢ';
   --c-info: 'Ⓔ';
   --c-danger: 'Ⓝ';
 }
