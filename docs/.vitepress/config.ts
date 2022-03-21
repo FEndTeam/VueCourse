@@ -44,7 +44,9 @@ function getGuideSidebar() {
         { text: '响应式变量', link: '/syntax/reactive-variable' },
         { text: '计算属性', link: '/syntax/computed' },
         { text: '类与样式绑定', link: '/syntax/class-and-style' },
-        { text: '条件渲染', link: '/syntax/conditional' }
+        { text: '条件渲染', link: '/syntax/conditional' },
+        { text: '列表渲染', link: '/syntax/list' },
+        { text: '事件处理', link: '/syntax/event-handling' }
       ]
     },
     {
