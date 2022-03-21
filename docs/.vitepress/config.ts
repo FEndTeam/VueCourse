@@ -49,7 +49,9 @@ function getGuideSidebar() {
         { text: '事件处理', link: '/syntax/event-handling' },
         { text: '表单输入绑定', link: '/syntax/forms' },
         { text: '生命周期', link: '/syntax/lifecycle' },
-        { text: '侦听器', link: '/syntax/watchers' }
+        { text: '侦听器', link: '/syntax/watchers' },
+        { text: '模板ref', link: '/syntax/template-refs' },
+        { text: '组件基础', link: '/syntax/component-basics' }
       ]
     },
     {
