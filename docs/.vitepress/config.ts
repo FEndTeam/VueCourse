@@ -46,7 +46,10 @@ function getGuideSidebar() {
         { text: '类与样式绑定', link: '/syntax/class-and-style' },
         { text: '条件渲染', link: '/syntax/conditional' },
         { text: '列表渲染', link: '/syntax/list' },
-        { text: '事件处理', link: '/syntax/event-handling' }
+        { text: '事件处理', link: '/syntax/event-handling' },
+        { text: '表单输入绑定', link: '/syntax/forms' },
+        { text: '生命周期', link: '/syntax/lifecycle' },
+        { text: '侦听器', link: '/syntax/watchers' }
       ]
     },
     {
