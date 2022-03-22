@@ -127,6 +127,29 @@
   通过组合式 API，我们可以使用导入的 API 函数来描述组件逻辑。在单文件组件中，组合式 API 通常会与 `<script setup>` 搭配使用。这个 setup attribute 是一个标识，告诉 Vue 需要在编译时进行转换，来减少使用组合式 API 时的样板代码。
 
   ```html
+  <script>
+  import { defineComponent, ref } from 'vue';
+  
+  import HelloWorld from './components/HelloWorld.vue'
+  import TheWelcome from './components/TheWelcome.vue'
+  
+  export default defineComponent({
+    components: {
+        HelloWorld,
+        TheWelcome
+    },
+    setup() {
+      let num = ref(0)
+  
+      return {
+        num
+      }
+    }
+  });
+  </script>
+  ```
+
+  ```html
   <script setup>
     import { ref, onMounted } from 'vue'
 
