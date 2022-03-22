@@ -10,8 +10,7 @@
 2. 声明响应式状态
 3. 使用响应式状态
 4. 更改响应式状态
-5. `<script setup>`
-6. `reactive()`的局限性
+5. `reactive()`的局限性
 :::
 
 ::: info 体验
@@ -86,29 +85,7 @@
   </button>
   ```
 
-* **Kn.5：`<script setup>`**
-
-  在 `setup()` 函数中手动暴露状态和方法可能非常繁琐。幸运的是，可以通过使用构建工具来简化该操作。当使用单文件组件（SFC）时，我们可以使用 `<script setup>` 来简化大量样板代码。
-
-  ```js
-  <script setup>
-  import { reactive } from 'vue'
-
-  const state = reactive({ count: 0 })
-
-  function increment() {
-    state.count++
-  }
-  </script>
-
-  <template>
-    <button @click="increment">
-      {{ state.count }}
-    </button>
-  </template>
-  ```
-
-* **Kn.6：`reactive()`的局限性**
+* **Kn.5：`reactive()`的局限性**
 
   `reactive()` API 有两条限制：
   * ⓵ 仅对对象类型有效（对象、数组和 Map、Set 这样的集合类型），而对 string、number 和 boolean 这样的 基础类型 无效。

@@ -9,7 +9,6 @@
 1. 定义响应式变量
 2. ref 在模板中的解包
 3. ref 在响应式对象中的解包
-4. 响应性语法糖
 :::
 
 ::: info 体验
@@ -123,27 +122,6 @@
   console.log(state.count) // 2
   // 原来的 ref 现在已经和 state.count 脱去联系
   console.log(count.value) // 1
-  ```
-
-* **Kn.4：响应性语法糖（实验）**
-
-  不得不对 ref 使用 .value 是一个受限于 JavaScript 语言限制的缺点。
-  不过在编译期间，自动在合适的位置上添加上 .value 可以改进开发体验。
-  Vue 提供了一个语法糖，可以在编译时作相应转换，使得我们可以像这样书写上面的计数器示例
-
-  ```html
-  <script setup>
-  let count = $ref(0)
-
-  function increment() {
-    // no need for .value
-    count++
-  }
-  </script>
-
-  <template>
-    <button @click="increment">{{ count }}</button>
-  </template>
   ```
 
 :::

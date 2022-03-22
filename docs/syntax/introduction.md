@@ -6,170 +6,91 @@
 
 ::: warning 步骤
 
-1. 什么是Vue
-2. 渐进式框架
-3. 单文件组件
-4. API 风格
+1. 概念
+2. 特点
+3. 发展简史
+4. 为什么学习Vue3
 
 :::
 
 ::: info 体验
 
-* **Kn.1：什么是Vue**
+* **Kn.1：概念**
 
-  Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面，无论任务是简单还是复杂。
+  Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。
+  它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面，无论任务是简单还是复杂。
 
-  下面是一个最基本的示例：
+  ![尤雨溪](./images/image_202201071714.jpg)
+
+* **Kn.2：特点**
+
+  * **⓵ 门槛低，上手快**
+
+    简单易学，只要稍微会点`HTML`、`CSS`、`JavaScript`基础就能很快上手`Vue`
+
+  * **⓶ 灵活的组件系统**
+
+    组件（`Component`）是 `Vue` 最强大的功能之一。组件可以扩展 `HTML` 元素，封装可重用的代码。
+
+  * **⓷ 强大的指令系统**
+
+    `Vue` 与页面进行交互，主要就是通过内置指令来完成的，指令的作用是当其表达式的值改变时相应地将某些行为应用到 `DOM` 。
+
+  * **⓸ 丰富的生态系统**
+
+    在 `GitHub`中，有非常多的有关 `Vue`周边的库，官方提供了几个开发Vue项目必用的库(`VueRouter`、`Vuex`、`Nuxt`)，除此以外，全世界各国的程序员都在为Vue提供相关的库(表单校验、UI组件等),如果你还对Vue周边有任何疑问，还可以访问[GitHub仓库](https://github.com/vuejs/awesome-vue)去查看详细信息
+
+  * **⓹ 先进的框架思想**
+
+    Vue采用 `MVVM`设计思想来对视图层的开发进行了升级，使得我们从以前的**命令式**编程转变为**声明式**编程，其中`MVVM`中的 `M`代表状态(即数据)，`V`代表模板(即`HTML`),而`VM`正是视图模型(`ViewModel`),也是Vue在前端开发中所扮演的角色，监听数据变化，控制视图更新。
+
+    ![MVVM](./images/image_20222_01_08_2009.png)
+
+* **Kn.3：发展简史**
+
+  `Vue` 最初源于 2013 年，当时只是作者尤雨溪(`Evan You`)在 `Google Creative Lab`的创意技术人员(`Create Technologist`)工作时的业余项目。
+
+  尤雨溪在`Google`工作一段时间后，结合过去开发 `AngularJS` 的经验，开发出 `Vue` 这一套框架，并在2014年2月再 `Hacker News` 与 `Reddit` 等网站对外正式发布了这个 `Vue 0.8` 的版本。
+
+  随着时间的流逝，`Vue` 也吸引到知名 `PHP` 框架 `Laravel` 的作者 `Taylor Otwell` 在 `Twitter` 上为 `Vue` 打起免费广告， 并在后续版本中被纳入 `Laravel` 官方指定的入门套件，这使得 `Vue` 逐渐在技术圈更加广为人知。
+
+  后来，**`Vue` 1.x 版正式发布于 2015 年**， 这个时期的 `Vue` 就像轻量版的 `AngularJS`(v1)，将 `template` 直接在浏览器中解析。同年， `VueRouter`、`Vuex`、`Vue CLI` 等周边生态工具链也相继发布。
+
+  接着，**2016 年 10 月发布 Vue 2.x版本(代号: `Ghost in the Shell`)**。由于这个版本借鉴了 `React` 的 `Virtual DOM` 更新机制， 将 `template` 编译为 `render function`，并回传 `Virtual DOM` ，再由浏览器输出渲染，也提供了 `SSR` 的可能性，在维持 v1 时期的良好开发体验与增强执行效率的平衡下，使得 Vue 正式站稳脚跟，跻身于主流前端框架之列。
+
+  而万众期待的**Vue 3.x(版本代号：One Piece)于 2020年9月18日 正式推出**。此版本底层核心由 `TypeScript` 重写，除了有九成以上 语法 与 `Vue 2.x` 相容之外，效率变得更快、编译后的体积更小之外，也加入了不少好用的特性。
+
+* **Kn.4：为什么学习Vue3**
+
+  * ⓵ Vue3 运行性能大幅提升，速度是 Vue2 的 1.5 倍左右
+  * ⓶ Vue3 支持 tree shaking，可以进行按需编译，编译后的文件体积比 Vue2 更小
+  * ⓷ Vue3 组合式 API 使应用中的功能代码更聚合，使组件间公共逻辑的抽取更容易
+  * ⓸ Vue3 对 TypeScript 的支持更加友好，对大型前端应用的支持更加游刃有余
+  * ⓹ Vue3 中提供了更加先进的功能，比如 teleport，suspense 等
+  * ⓺ Vue 是目前国内前端使用者最多的框架，Vue3 是将来的必然趋势
+
+* **Kn.5：基本使用**
+
+  请直接复制下面的代码到一个 HTML 文件中，并在浏览器中打开它：
 
   ```html
-  <div id="app">
-    <button @click="count++">
-      Count is: {{ count }}
-    </button>
-  </div>
-  ```
-
-  ```js
-  import { createApp } from 'vue'
-
-  createApp({
-    data() {
-      return {
-        count: 0
-      }
-    }
-  }).mount('#app')
-  ```
-
-  * **声明式渲染**：Vue 通过自己的模板语法扩展了标准 HTML，使我们可以声明式地描述基于 JavaScript 状态输出 HTML
-  * **响应性**：Vue 会自动跟踪 JavaScript 状态变化并在改变发生时响应式地更新 DOM
-
-* **Kn.2：渐进式框架**
-
-  Vue 是一个框架和生态，功能覆盖了大部分前端开发常见的需求。根据你的需求场景，Vue 可以按不同的方式使用：
-  * 增强静态的 HTML 而无需构建步骤
-  * 在任何页面中作为 Web Components 嵌入
-  * 单页应用 (SPA)
-  * 全栈 / 服务端渲染 (SSR)
-  * JAMStack / 静态站点生成 (SSG)
-  * 目标为桌面端、移动端、WebGL，甚至是命令行终端
-
-* **Kn.3：单文件组件**
-
-  在大多数启用了构建工具的 Vue 项目中，我们可以使用一种类似 HTML 格式的文件来书写 Vue 组件，它被称为单文件组件 (也被称为 *.vue 文件，英文缩写为 SFC)。顾名思义，Vue 的单文件组件会将一个组件的逻辑 (JavaScript)，模板 (HTML) 和样式 (CSS) 封装在同一个文件里。
-
-  ```html
+  <script src="https://unpkg.com/vue@3"></script>
+  
+  <div id="app">{{ message }}</div>
+  
   <script>
-    export default {
-      data() {
+
+    // 创建 Vue 应用
+    let app = Vue.createApp({
+       data() {
         return {
-          count: 0
+          message: 'Hello Vue!'
         }
       }
-    }
+    });
+    // 把 app 挂载到 id 为 app的元素上
+    app.mount('#app');
   </script>
-
-  <template>
-    <button @click="count++">Count is: {{ count }}</button>
-  </template>
-
-  <style scoped>
-    button {
-      font-weight: bold;
-    }
-  </style>  
-  ```
-
-  单文件组件是 Vue 的标志性功能。如果你的用例需要进行构建，我们推荐用它来编写 Vue 组件
-
-* **Kn.4：`API`风格**
-
-  Vue 的组件可以按两种不同的风格书写：**选项式 API**和**组合式 API**
-
-  **选项式 API：**
-
-  使用选项式 API，我们可以用包含多个选项的对象来描述组件的逻辑，例如 data、methods 和 mounted。选项所定义的属性都会暴露在函数内部的 this 上，它会指向当前的组件实例。
-
-  ```html
-  <script>
-    export default {
-      // data() 返回的属性将会成为响应式的状态
-      // 并且暴露在 `this` 上
-      data() {
-        return {
-          count: 0
-        }
-      },
-
-      // methods 是一些用来更改状态与触发更新的函数
-      // 它们可以在模板中作为事件监听器绑定
-      methods: {
-        increment() {
-          this.count++
-        }
-      },
-
-      // 生命周期钩子会在组件生命周期的各个不同阶段被调用
-      // 例如这个函数就会在组件挂载完成后被调用
-      mounted() {
-        console.log(`The initial count is ${this.count}.`)
-      }
-    }
-  </script>
-  
-  <template>
-    <button @click="increment">count is: {{ count }}</button>
-  </template>
-  ```
-
-  **组合式 API:**
-
-  通过组合式 API，我们可以使用导入的 API 函数来描述组件逻辑。在单文件组件中，组合式 API 通常会与 `<script setup>` 搭配使用。这个 setup attribute 是一个标识，告诉 Vue 需要在编译时进行转换，来减少使用组合式 API 时的样板代码。
-
-  ```html
-  <script>
-  import { defineComponent, ref } from 'vue';
-  
-  import HelloWorld from './components/HelloWorld.vue'
-  import TheWelcome from './components/TheWelcome.vue'
-  
-  export default defineComponent({
-    components: {
-        HelloWorld,
-        TheWelcome
-    },
-    setup() {
-      let num = ref(0)
-  
-      return {
-        num
-      }
-    }
-  });
-  </script>
-  ```
-
-  ```html
-  <script setup>
-    import { ref, onMounted } from 'vue'
-
-    // 响应式状态
-    const count = ref(0)
-
-    // 用来修改状态、触发更新的函数
-    function increment() {
-      count.value++
-    }
-
-    // 生命周期钩子
-    onMounted(() => {
-      console.log(`The initial count is ${count.value}.`)
-    })
-  </script>
-
-  <template>
-    <button @click="increment">Count is: {{ count }}</button>
-  </template>
   ```
 
 :::
@@ -177,12 +98,7 @@
 ::: danger 总结
 
 * 【重点】
-  * ⓵ 什么是Vue
-  * ⓶ 渐进式框架
-  * ⓷ 单文件组件
-  * ⓸ API 风格
 * 【难点】
-
 * 【注意点】
 
 :::
