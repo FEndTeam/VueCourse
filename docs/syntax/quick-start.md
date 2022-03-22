@@ -1,7 +1,7 @@
 # 快速开始
 
 ::: tip 目标
-这一小节，我们的目标是掌握使用Vue的具体步骤
+这一小节，我们的目标是了解使用Vue的方式
 :::
 
 ::: warning 步骤
@@ -57,13 +57,17 @@
   <div id="app">{{ message }}</div>
   
   <script>
-    Vue.createApp({
-      data() {
+
+    // 创建 Vue 应用
+    let app = Vue.createApp({
+       data() {
         return {
           message: 'Hello Vue!'
         }
       }
-    }).mount('#app')
+    });
+    // 把 app 挂载到 id 为 app的元素上
+    app.mount('#app');
   </script>
   ```
 

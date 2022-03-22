@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="./lib/vue@next.js"></script>
+  <script src="https://unpkg.com/vue@3"></script>
 </head>
 
 <body>
@@ -14,20 +14,22 @@
   <div id="app">
     <!-- 根组件 -->
     <!-- <App></App> -->
-    <root></root>
+    {{message}}
+    <!-- <root></root> -->
   </div>
 
   <!-- 引入 Vue库文件 -->
-
+  
   <script>
+
     // 创建 Vue 应用
-    let app = Vue.createApp({});
-
-    // 创建 根组件
-    app.component('root', {
-      template: '<div>Hello Vue  {{Math.PI}}</div>'
-    })
-
+    let app = Vue.createApp({
+       data() {
+        return {
+          message: 'Hello Vue!'
+        }
+      }
+    });
     // 把 app 挂载到 id 为 app的元素上
     app.mount('#app');
   </script>
