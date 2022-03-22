@@ -25,21 +25,35 @@
   * ⓶ 可选功能提示
 
     ```bash
-    ✔ Project name: … <your-project-name>
-    ✔ Add TypeScript? … No / Yes
-    ✔ Add JSX Support? … No / Yes
-    ✔ Add Vue Router for Single Page Application development? … No / Yes
-    ✔ Add Pinia for state management? … No / Yes
-    ✔ Add Vitest for Unit testing? … No / Yes
-    ✔ Add Cypress for both Unit and End-to-End testing? … No / Yes
-    ✔ Add ESLint for code quality? … No / Yes
-    ✔ Add Prettier for code formating? … No / Yes
-    
-    Scaffolding project in ./<your-project-name>...
-    Done.
+
+    PS E:\python19\20220322\other> npm init vue@latest
+    Need to install the following packages:
+      create-vue@latest
+    Ok to proceed? (y) y
+
+    Vue.js - The Progressive JavaScript Framework
+
+    √ Project name: ... 项目名称
+    √ Add TypeScript? ... No / Yes
+    √ Add JSX Support? ... No / Yes
+    √ Add Vue Router for Single Page Application development? ... No / Yes
+    √ Add Pinia for state management? ... No / Yes
+    √ Add Vitest for Unit Testing? ... No / Yes
+    √ Add Cypress for both Unit and End-to-End testing? ... No / Yes
+    √ Add ESLint for code quality? ... No / Yes
+    √ Add Prettier for code formatting? ... No / Yes
+
+    Scaffolding project in E:\python19\20220322\other\项目名称...
+
+    Done. Now run:
+
+      cd 项目名称
+      npm install
+      npm run dev
+
     ```
 
-  * ⓷ 装依赖并启动开发服务器
+* ⓷ 装依赖并启动开发服务器
 
     ```bash
     > cd <your-project-name>
