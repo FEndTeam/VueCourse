@@ -52,7 +52,12 @@ function getGuideSidebar() {
         { text: '生命周期', link: '/syntax/lifecycle' },
         { text: '侦听器', link: '/syntax/watchers' },
         { text: '模板ref', link: '/syntax/template-refs' },
-        { text: '组件基础', link: '/syntax/component-basics' }
+        { text: '组件基础', link: '/syntax/component-basics' },
+        { text: '组件注册', link: '/syntax/registration' },
+        { text: 'Props', link: '/syntax/props' },
+        { text: '组件事件', link: '/syntax/events' },
+        { text: '透传attribute', link: '/syntax/attrs' },
+        { text: '插槽', link: '/syntax/slots' },
       ]
     },
     {
