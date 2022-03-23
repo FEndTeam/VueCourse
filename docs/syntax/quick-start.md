@@ -18,13 +18,13 @@
   为了在机器上创建一个启用构建工具的 Vue 项目，请在命令行中运行下面的指令 (不要带上 > 符号)
 
   ```bash
-  > npm init vue@latest
+  > npm create vite@latest
   ```
 
 * **Step.2：可选功能提示**
 
   ```bash
-  PS E:\**\**\**> npm init vue@latest
+  PS E:\**\**\**> npm create vite@latest
   Need to install the following packages:
     create-vue@latest
   Ok to proceed? (y) y
