@@ -1,7 +1,7 @@
 # 透传 attribute
 
 ::: tip 目标
-
+这一小节，我们的目标是掌握 Attribute的基本使用
 :::
 
 ::: warning 步骤

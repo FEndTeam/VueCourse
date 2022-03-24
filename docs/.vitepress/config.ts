@@ -59,6 +59,8 @@ function getGuideSidebar() {
         { text: '组件事件', link: '/syntax/events' },
         { text: '透传attribute', link: '/syntax/attrs' },
         { text: '插槽', link: '/syntax/slots' },
+        { text: '依赖注入', link: '/syntax/provide-inject' },
+        { text: '异步组件', link: '/syntax/async-component' }
       ]
     },
     {
