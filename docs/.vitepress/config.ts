@@ -59,7 +59,15 @@ function getGuideSidebar() {
         { text: '透传attribute', link: '/syntax/attrs' },
         { text: '插槽', link: '/syntax/slots' },
         { text: '依赖注入', link: '/syntax/provide-inject' },
-        { text: '异步组件', link: '/syntax/async-component' }
+        { text: '异步组件', link: '/syntax/async-component' },
+        { text: '可组合函数', link: '/syntax/composables' },
+        { text: '自定义指令', link: '/syntax/custom-directives' },
+        { text: '插件', link: '/syntax/async-component' },
+        { text: 'Transition', link: '/syntax/async-component' },
+        { text: 'TransitionGroup', link: '/syntax/async-component' },
+        { text: 'KeepAlive', link: '/syntax/async-component' },
+        { text: 'Teleport', link: '/syntax/async-component' },
+        { text: 'Suspense', link: '/syntax/async-component' }
       ]
     },
     {
