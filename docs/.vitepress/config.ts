@@ -62,12 +62,11 @@ function getGuideSidebar() {
         { text: '异步组件', link: '/syntax/async-component' },
         { text: '可组合函数', link: '/syntax/composables' },
         { text: '自定义指令', link: '/syntax/custom-directives' },
-        { text: '插件', link: '/syntax/async-component' },
-        { text: 'Transition', link: '/syntax/async-component' },
-        { text: 'TransitionGroup', link: '/syntax/async-component' },
-        { text: 'KeepAlive', link: '/syntax/async-component' },
-        { text: 'Teleport', link: '/syntax/async-component' },
-        { text: 'Suspense', link: '/syntax/async-component' }
+        { text: '插件', link: '/syntax/plugins' },
+        { text: 'Transition', link: '/syntax/transition' },
+        { text: 'TransitionGroup', link: '/syntax/transition-group' },
+        { text: 'KeepAlive', link: '/syntax/keep-alive' },
+        { text: 'Teleport', link: '/syntax/teleport' },
       ]
     },
     {
