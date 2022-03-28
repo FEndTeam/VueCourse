@@ -336,7 +336,7 @@
 
     则相应的声明应该是：
 
-    ```html
+    ```js
     const props = defineProps(['title', 'titleModifiers'])
     defineEmits(['update:title'])
     
