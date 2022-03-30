@@ -73,7 +73,18 @@ function getGuideSidebar() {
       text: "脚手架"
     },
     {
-      text: "路由管理"
+      text: "路由管理",
+      children: [
+        { text: '路由概念', link: '/routing/notion' },
+        { text: '路由实现', link: '/routing/accomplish' },
+        { text: '基本介绍', link: '/routing/introduction' },
+        { text: '路由配置', link: '/routing/config' },
+        { text: '路由规则', link: '/routing/rule' },
+        { text: '路由渲染', link: '/routing/render'},
+        { text: '获取路由信息', link: '/routing/information'},
+        { text: '操作路由', link: '/routing/operation'},
+        { text: '路由跳转', link: '/routing/jump'}
+      ]
     },
     {
       text: "状态管理"
