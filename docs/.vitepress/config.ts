@@ -87,7 +87,16 @@ function getGuideSidebar() {
       ]
     },
     {
-      text: "状态管理"
+      text: "状态管理",
+      children: [
+        { text: '基本简介', link: '/state/introduction' },
+        { text: 'Pinia配置', link: '/state/config' },
+        { text: '操作State', link: '/state/state' },
+        { text: '操作Action', link: '/state/action' },
+        { text: '操作Getter', link: '/state/getter' },
+        { text: 'Pinia持久化', link: '/state/persist'},
+       
+      ]
     },
     {
       text: "服务端渲染"
