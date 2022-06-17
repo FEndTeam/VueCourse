@@ -65,7 +65,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
 
-          # 先用 SSH 命令删除旧文件
+          # 使用 SSH 命令删除旧文件
           script: |
             rm -rf /usr/share/nginx/com_wanlum_vue/*
 
