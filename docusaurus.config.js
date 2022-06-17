@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Vue Doc',
   tagline: 'Vue3 technical documentation',
-  url: 'vue.wanlum.com',
+  url: 'http://vue.wanlum.com', 
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -22,10 +22,10 @@ const config = {
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  // i18n: {
+  //   defaultLocale: 'en',
+  //   locales: ['en'],
+  // },
 
   presets: [
     [
@@ -59,7 +59,7 @@ const config = {
       navbar: {
         title: 'Vue Doc',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Vue Doc',
           src: 'img/logo.svg',
         },
         items: [
@@ -71,7 +71,7 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/FEndTeam/VueCourse.git',
+            href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
           },
@@ -115,12 +115,12 @@ const config = {
               // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/FEndTeam/VueCourse.git',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Yeung WanLum, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} YeungWanLum, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
