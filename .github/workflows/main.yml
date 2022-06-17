@@ -56,25 +56,15 @@ jobs:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Delete old files from server
-        uses: appleboy/ssh-action@master
-        with:
-          # 这里配置对应仓库设置的变量，就可以避免服务器配置暴露
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-
-          # 使用 SSH 命令删除旧文件
-          script: |
-            rm -rf /usr/share/nginx/com_wanlum_vue/*
-
-      - name: Deploy to server
-        uses: wlixcc/SFTP-Deploy-Action@v1.0 # 这个是sftp插件
-        with:
-          server: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          ssh_private_key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.PORT }}
-          local_path: 'build/*'
-          remote_path: '/usr/share/nginx/com_wanlum_vue'
+      # 部署静态服务到云服务器     
+      - name: Deploy to Staging server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "build/"
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USENAME }}
+          REMOTE_PORT: ${{ secrets.PORT }}
+          TARGET: "/usr/share/nginx/com_wanlum_vue/"
+          EXCLUDE: "/dist/, /node_modules/"
