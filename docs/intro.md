@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Vue-Overview
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Vue 框架知识概览
 
 ## Vue 基础语法
 

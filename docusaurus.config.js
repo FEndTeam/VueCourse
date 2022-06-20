@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Vue Doc',
-  tagline: 'Vue3 technical documentation',
+  title: 'Vue Technical Documentation',
+  tagline: 'Vue + 脚手架 + 路由管理 + 状态管理 + 服务器端渲染 + UI框架',
   url: 'http://vue.wanlum.com', 
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -64,12 +64,12 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'Tutorial',
+          // },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
