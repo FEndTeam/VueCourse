@@ -20,12 +20,12 @@ export default {
     },
 
     editLink: {
-      pattern: 'https://github.com/VueProjectCourse/HRManagerSystem/docs/:path',
+      pattern: 'https://github.com/FEndTeam/VueCourse/docs/:path',
       text: 'Edit this page on GitHub'
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/VueProjectCourse/HRManagerSystem' }
+      { icon: 'github', link: 'https://github.com/FEndTeam/VueCourse' }
     ],
 
     footer: {
@@ -136,7 +136,7 @@ function sidebarHrms() {
       text: '前期准备',
       collapsible: true,
       items: [
-        { text: 'Introduction', link: '/hrms/introduction' },
+        { text: '项目介绍', link: '/hrms/introduction' },
       ]
     },
     {
