@@ -12,10 +12,11 @@ export default {
     sidebar: {
       '/syntax/': sidebarSyntax(),
       '/scaffold/': sidebarScaffold(),
-      '/router/':sidebarRouter(),
-      '/state/':sidebarState(),
-      '/ssr/':sidebarSSR(),
-      '/plugin/':sidebarPlugin(),
+      '/router/': sidebarRouter(),
+      '/state/': sidebarState(),
+      '/ssr/': sidebarSSR(),
+      '/plugin/': sidebarPlugin(),
+      '/hrms/': sidebarHrms(),
     },
 
     editLink: {
@@ -48,6 +49,12 @@ function nav() {
     { text: '服务器端渲染', link: '/ssr/introduction', activeMatch: '/ssr/' },
     // 插件
     { text: '常见插件', link: '/plugin/introduction', activeMatch: '/plugin/' },
+    // 项目实战 
+    {
+      text: '实战项目', items: [
+        { text: '人力资源管理系统', activeMatch: '/hrms/', link: '/hrms/introduction' },
+      ]
+    },
   ]
 }
 
@@ -93,7 +100,7 @@ function sidebarState() {
       collapsible: true,
       items: [
         { text: 'Introduction', link: '/state/introduction' },
-        { text: "[vuex]introduction", link:'/state/vuex-introduction'}
+        { text: "[vuex]introduction", link: '/state/vuex-introduction' }
       ]
     }
   ]
@@ -111,9 +118,6 @@ function sidebarSSR() {
   ]
 }
 
-
-
-
 function sidebarPlugin() {
   return [
     {
@@ -121,6 +125,25 @@ function sidebarPlugin() {
       collapsible: true,
       items: [
         { text: 'Introduction', link: '/plugin/introduction' },
+      ]
+    }
+  ]
+}
+
+function sidebarHrms() {
+  return [
+    {
+      text: '前期准备',
+      collapsible: true,
+      items: [
+        { text: 'Introduction', link: '/hrms/introduction' },
+      ]
+    },
+    {
+      text: '后期优化',
+      collapsible: true,
+      items: [
+        { text: 'youhua', link: '/hrms/youhua' },
       ]
     }
   ]

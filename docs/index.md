@@ -7,7 +7,7 @@ titleTemplate: Vue Technical Documentation
 hero:
   name: Vue
   text: 技术文档
-  tagline: 一款用于构建 Web 界面的渐进式 JavaScript 框架
+  tagline: 一款用于构建 Web 界面的渐进式 JavaScript 框架的相关学习资料
   actions:
     - theme: brand
       text: 基本介绍 →
