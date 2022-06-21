@@ -86,6 +86,18 @@ function sidebarRouter() {
     }
   ]
 }
+function sidebarState() {
+  return [
+    {
+      text: '状态管理',
+      collapsible: true,
+      items: [
+        { text: 'Introduction', link: '/state/introduction' },
+        { text: "[vuex]introduction", link:'/state/vuex-introduction'}
+      ]
+    }
+  ]
+}
 
 function sidebarSSR() {
   return [
@@ -99,17 +111,7 @@ function sidebarSSR() {
   ]
 }
 
-function sidebarState() {
-  return [
-    {
-      text: '状态管理',
-      collapsible: true,
-      items: [
-        { text: 'Introduction', link: '/state/introduction' },
-      ]
-    }
-  ]
-}
+
 
 
 function sidebarPlugin() {
