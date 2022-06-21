@@ -6,6 +6,7 @@ export default {
   lastUpdated: true,
 
   themeConfig: {
+    logo: '/images/hero.png',
     nav: nav(),
 
     sidebar: {
@@ -36,24 +37,24 @@ export default {
 function nav() {
   return [
     // 基本语法
-    { text: 'Syntax', link: '/syntax/introduction', activeMatch: '/syntax/' },
+    { text: '基础语法', link: '/syntax/introduction', activeMatch: '/syntax/' },
     // 脚手架
-    { text: 'Scaffold', link: '/scaffold/introduction', activeMatch: '/scaffold/' },
+    { text: '脚手架', link: '/scaffold/introduction', activeMatch: '/scaffold/' },
     // 路由管理
-    { text: 'Router', link: '/router/introduction', activeMatch: '/router/' },
+    { text: '路由', link: '/router/introduction', activeMatch: '/router/' },
     // 状态
-    { text: 'State', link: '/state/introduction', activeMatch: '/state/' },
+    { text: '状态管理', link: '/state/introduction', activeMatch: '/state/' },
     // 服务器端渲染
-    { text: 'SSR', link: '/ssr/introduction', activeMatch: '/ssr/' },
+    { text: '服务器端渲染', link: '/ssr/introduction', activeMatch: '/ssr/' },
     // 插件
-    { text: 'Plugin', link: '/plugin/introduction', activeMatch: '/plugin/' },
+    { text: '常见插件', link: '/plugin/introduction', activeMatch: '/plugin/' },
   ]
 }
 
 function sidebarSyntax() {
   return [
     {
-      text: '基础语法',
+      text: '简介',
       collapsible: true,
       items: [
         { text: '基本介绍', link: '/syntax/introduction' },
