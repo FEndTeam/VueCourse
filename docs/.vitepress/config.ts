@@ -75,8 +75,8 @@ function sidebarScaffold() {
       text: '脚手架',
       collapsible: true,
       items: [
+        { text: '[vite]快速入门', link: '/scaffold/vite-quickstart' },
         { text: '基本介绍', link: '/scaffold/introduction' },
-        { text: '[vite]快速入门', link: '/scaffold/[vite]quickstart' },
       ]
     }
   ]
