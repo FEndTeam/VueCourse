@@ -69,7 +69,7 @@ function sidebarScaffold() {
       text: '脚手架',
       collapsible: true,
       items: [
-        { text: 'Introduction', link: '/scaffold/introduction' },
+        { text: '基本介绍', link: '/scaffold/introduction' },
       ]
     }
   ]
