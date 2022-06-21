@@ -49,11 +49,11 @@ function nav() {
     // 插件
     { text: '常见插件', link: '/plugin/introduction', activeMatch: '/plugin/' },
     // 项目实战 
-    {
-      text: '实战项目', items: [
-        { text: '人力资源管理系统', activeMatch: '/hrms/', link: '/hrms/introduction' },
-      ]
-    },
+    // {
+    //   text: '实战项目', items: [
+    //     { text: '人力资源管理系统', activeMatch: '/hrms/', link: '/hrms/introduction' },
+    //   ]
+    // },
   ]
 }
 
