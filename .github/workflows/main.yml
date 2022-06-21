@@ -64,7 +64,7 @@ jobs:
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "docs/.vitepress/dist/"
           REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_USER: ${{ secrets.USENAME }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
           REMOTE_PORT: ${{ secrets.PORT }}
           TARGET: "/usr/share/nginx/com_wanlum_vue/"
           EXCLUDE: "/dist/, /node_modules/"
