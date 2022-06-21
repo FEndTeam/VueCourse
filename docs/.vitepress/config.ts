@@ -83,6 +83,7 @@ function sidebarSyntax() {
       collapsible: true,
       items: [
         { text: '基本介绍', link: '/syntax/introduction' },
+        { text: '简单使用', link: '/syntax/quickstart' },
       ]
     }
   ]
