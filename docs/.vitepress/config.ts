@@ -10,7 +10,7 @@ export default {
     nav: nav(),
     sidebar: {
       '/syntax/': sidebarSyntax(),
-      '/falsework/': sidebarFalsework(),
+      '/falsework/': sidebarScaffold(),
       '/router/': sidebarRouter(),
       '/state/': sidebarState(),
       '/ssr/': sidebarSSR(),
@@ -39,7 +39,7 @@ function nav() {
     // 基本语法
     { text: '基础语法', link: '/syntax/introduction', activeMatch: '/syntax/' },
     // 脚手架
-    { text: '脚手架',  link: '/falsework/introduction', activeMatch: '/falsework/' },
+    // { text: '脚手架',  link: '/scaffold/introduction', activeMatch: '/scaffold/' },
     // 路由管理
     { text: '路由',    link: '/router/introduction', activeMatch: '/router/' },
     // 状态管理
@@ -69,14 +69,14 @@ function sidebarSyntax() {
   ]
 }
 
-function sidebarFalsework() {
+function sidebarScaffold() {
   return [
     {
       text: '脚手架',
       collapsible: true,
       items: [
-        { text: '[vite]快速入门', link: '/falsework/vite-quickstart' },
-        { text: '基本介绍', link: '/falsework/introduction' },
+        { text: '[vite]快速入门', link: '/scaffold/vite-quickstart' },
+        { text: '基本介绍', link: '/scaffold/introduction' },
       ]
     }
   ]
