@@ -47,6 +47,16 @@
 
   而万众期待的**Vue 3.x(版本代号：One Piece)于 2020年9月18日 正式推出**。此版本底层核心由 `TypeScript` 重写，除了有九成以上 语法 与 `Vue 2.x` 相容之外，效率变得更快、编译后的体积更小之外，也加入了不少好用的特性。
 
+```js
+editLink: {
+  pattern: 'https://github.com/VueProjectCourse/HRManagerSystem/docs/:path',
+  text: 'Edit this page on GitHub'
+},
+socialLinks: [
+  { icon: 'github', link: 'https://github.com/VueProjectCourse/HRManagerSystem' }
+],
+```
+
 ## 为什么学习Vue3
 
 * ⓵ Vue3 运行性能大幅提升，速度是 Vue2 的 1.5 倍左右
