@@ -8,7 +8,6 @@ export default {
   themeConfig: {
     logo: '/images/hero.png',
     nav: nav(),
-
     sidebar: {
       '/syntax/': sidebarSyntax(),
       '/scaffold/': sidebarScaffold(),
@@ -43,7 +42,7 @@ function nav() {
     { text: '脚手架',  link: '/scaffold/introduction', activeMatch: '/scaffold/' },
     // 路由管理
     { text: '路由',    link: '/router/introduction', activeMatch: '/router/' },
-    // 状态
+    // 状态管理
     { text: '状态管理', link: '/state/introduction', activeMatch: '/state/' },
     // 服务器端渲染
     { text: '服务器端渲染', link: '/ssr/introduction', activeMatch: '/ssr/' },
@@ -77,6 +76,7 @@ function sidebarScaffold() {
       collapsible: true,
       items: [
         { text: '基本介绍', link: '/scaffold/introduction' },
+        { text: '[vite]快速入门', link: '/scaffold/[vite]quickstart' },
       ]
     }
   ]
@@ -149,3 +149,18 @@ function sidebarHrms() {
     }
   ]
 }
+
+
+
+/** 
+⓵
+⓶
+⓷
+⓸
+⓹
+⓺
+⓻
+⓼
+⓽
+⓾
+*/
