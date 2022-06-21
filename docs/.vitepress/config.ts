@@ -38,8 +38,6 @@ function nav() {
   return [
     // 基本语法
     { text: '基础语法', link: '/syntax/introduction', activeMatch: '/syntax/' },
-    // 脚手架
-    // { text: '脚手架',  link: '/scaffold/introduction', activeMatch: '/scaffold/' },
     // 路由管理
     { text: '路由',    link: '/router/introduction', activeMatch: '/router/' },
     // 状态管理
@@ -48,6 +46,8 @@ function nav() {
     { text: '服务器端渲染', link: '/ssr/introduction', activeMatch: '/ssr/' },
     // 插件
     { text: '常见插件', link: '/plugin/introduction', activeMatch: '/plugin/' },
+    // 脚手架
+    { text: '脚手架',  link: '/scaffold/introduction', activeMatch: '/scaffold/' },
     // 项目实战 
     {
       text: '实战项目', items: [
