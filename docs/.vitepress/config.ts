@@ -93,10 +93,17 @@ function sidebarRouter() {
 function sidebarState() {
   return [
     {
-      text: '状态管理',
+      text: '状态管理-Pinia',
       collapsible: true,
       items: [
-        { text: 'Introduction', link: '/state/introduction' },
+        { text: '基本介绍', link: '/state/introduction' },
+      ]
+    },
+    {
+      text: '状态管理-Vuex',
+      collapsible: true,
+      items: [
+        { text: '基本介绍', link: '/state/vuex-introduction' },
       ]
     }
   ]
