@@ -26,7 +26,7 @@ jobs:
       # 缓存 node_modules
       - name: Cache dependencies
         uses: actions/cache@v2
-        id: package-cache
+        id: packages-cache
         with:
           path: |
             **/node_modules

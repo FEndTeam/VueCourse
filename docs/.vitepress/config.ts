@@ -11,7 +11,7 @@ export default {
       // 基本语法
       { text: '基础语法', link: '/syntax/introduction', activeMatch: '/syntax/' },
       // 脚手架
-      // { text: '脚手架', link: '/scaffold/introduction', activeMatch: '/scaffold/' },
+      { text: '脚手架', link: '/scaffold/introduction', activeMatch: '/scaffold/' },
       // 路由管理
       { text: '路由', link: '/router/introduction', activeMatch: '/router/' },
       // 状态管理
@@ -29,7 +29,7 @@ export default {
     ],
     sidebar: {
       '/syntax/': sidebarSyntax(),
-      // '/scaffold/': sidebarScaffold(),
+      '/scaffold/': sidebarScaffold(),
       '/router/': sidebarRouter(),
       '/state/': sidebarState(),
       '/ssr/': sidebarSSR(),
@@ -61,6 +61,18 @@ function sidebarSyntax() {
       items: [
         { text: '基本介绍', link: '/syntax/introduction' },
         { text: '简单使用', link: '/syntax/quickstart' },
+      ]
+    }
+  ]
+}
+
+function sidebarScaffold() {
+  return [
+    {
+      text: '脚手架',
+      collapsible: true,
+      items: [
+        { text: '基本介绍', link: '/scaffold/introduction' },
       ]
     }
   ]
