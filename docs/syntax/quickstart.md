@@ -1,6 +1,6 @@
 # 快速开始
 
-这一小节，我们主要学习如何快速使用 Vue 开发一个超级小的应用`Hello World`
+这一小节，我们主要学习如何快速使用 Vue 开发一个超级简单的应用`Hello World`
 
 ::: warning Path
 
