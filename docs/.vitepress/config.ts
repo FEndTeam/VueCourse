@@ -11,7 +11,7 @@ export default {
       // 基本语法
       { text: '基础语法', link: '/syntax/introduction', activeMatch: '/syntax/' },
       // 脚手架
-      { text: '脚手架', link: '/scaffold/introduction', activeMatch: '/scaffold/' },
+      { text: '脚手架', link: '/scaffold/introduction.md', activeMatch: '/scaffold/' },
       // 路由管理
       { text: '路由', link: '/router/introduction', activeMatch: '/router/' },
       // 状态管理
