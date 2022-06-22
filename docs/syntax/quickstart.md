@@ -43,9 +43,10 @@ app.mount('#app');
 ```js
 // 创建 Vue 应用
 let app = Vue.createApp({
-  data() {
+  setup(){
+    let message ="Hello World";
     return {
-      message: 'Hello World!!'
+      message
     }
   }
 });
