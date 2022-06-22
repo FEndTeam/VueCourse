@@ -1,71 +1,58 @@
 # 快速开始
 
-这一小节，我们来学习Vue的两种使用方式
+这一小节，我们主要学习如何快速使用 Vue 开发一个超级小的应用`Hello World`
 
-## Kn.1 通过`script`标签直接引用
+::: warning Path
 
-请直接复制下面的代码到一个 HTML 文件中，并在浏览器中打开它：
+1. 新建html文件，并在文件中引入vue文件
+2. 在body标签中，创建应用挂载容器
+3. 在script标签中，创建Vue应用
+4. 把Vue应用挂载到应用挂载容器中
+5. 在Vue应用中，声明数据状态
+6. 在应用挂载容器中，展示数据状态
+:::
+
+## Step.1 新建html文件，并在文件中引入vue文件
 
 ```html
 <script src="https://unpkg.com/vue@3"></script>
+```
 
-<div id="app">{{ message }}</div>
+## Step.2 在body标签中，创建应用挂载容器
 
-<script>
-  // 创建 Vue 应用
-  let app = Vue.createApp({
-     data() {
-      return {
-        message: 'Hello Vue!'
-      }
+```html
+<div id="app">div>
+```
+
+## Step.3 在script标签中，创建Vue应用
+
+```js
+// 创建 Vue 应用
+let app = Vue.createApp({});
+```
+
+## Step.4 把Vue应用挂载到应用挂载容器中
+
+```js
+// 把 app 挂载到 id 为 app的元素上
+app.mount('#app');
+```
+
+## Step.5 在Vue应用中，声明数据状态
+
+```js
+// 创建 Vue 应用
+let app = Vue.createApp({
+  data() {
+    return {
+      message: 'Hello World!!'
     }
-  });
-  // 把 app 挂载到 id 为 app的元素上
-  app.mount('#app');
-</script>
+  }
+});
 ```
 
-## Kn.2 通过脚手架创建项目
+## Step.6 在应用挂载容器中，展示数据状态
 
-* ⓵ 在命令中输入执行`vite`的命令
-
-```bash
-npm create vite@latest
-```
-
-* ⓶ 在命令中输入项目名称
-
-```bash
-? Project name: » vite-project
-```
-
-* ⓷ 选择前端框架
-
-```bash
-? Select a framework: » - Use arrow-keys. Return to submit.
->   vanilla
-    vue
-    react
-    preact
-    lit
-    svelte
-```
-
-* ⓸ 选择项目中是否使用ts
-
-```bash
-? Select a variant: » - Use arrow-keys. Return to submit.
->   vue
-    vue-ts
-```
-
-* ⓹ 进入项目目录，下载依赖并启动项目
-
-```bash
-
-Done. Now run:
-
-  cd vite-project
-  npm install
-  npm run dev
+```js
+<div id="app">{{ message }}</div>
 ```
