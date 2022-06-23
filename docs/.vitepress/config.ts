@@ -140,6 +140,7 @@ function sidebarHrms() {
       collapsible: true,
       items: [
         { text: '项目介绍', link: '/hrms/introduction' },
+        { text: '环境搭建', link: '/hrms/environment'}
       ]
     },
     {
