@@ -61,6 +61,7 @@ function sidebarSyntax() {
       items: [
         { text: '基本介绍', link: '/syntax/introduction' },
         { text: '简单使用', link: '/syntax/quickstart' },
+        { text: '组件基础', link: '/syntax/component-base' },
       ]
     }
   ]
