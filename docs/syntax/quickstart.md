@@ -21,14 +21,14 @@
 ## Step.2 在body标签中，创建应用挂载容器
 
 ```html
-<div id="app">div>
+<div id="app"></div>
 ```
 
 ## Step.3 在script标签中，创建Vue应用
 
 ```js
 // 创建 Vue 应用
-let app = Vue.createApp({});
+let app = Vue.createApp();
 ```
 
 ## Step.4 把Vue应用挂载到应用挂载容器中
