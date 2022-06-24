@@ -20,10 +20,13 @@
     <script src="https://unpkg.com/vue@3"></script>
 
     <script>
-      let app = Vue.createApp({
-        template: ""
-      });
-
+      let App = {
+        template: "<p>你好 <Hello/></p>"
+      }
+      let app = Vue.createApp(App);
+      app.component('Hello', {
+        template: "<span>撒旦发射点法大师傅</span>"
+      })
       // 把 app 挂载到 id 为 app的元素上
       app.mount('#app');
     </script>
