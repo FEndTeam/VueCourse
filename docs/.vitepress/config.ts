@@ -74,6 +74,7 @@ function sidebarScaffold() {
       collapsible: true,
       items: [
         { text: '基本介绍', link: '/scaffold/introduction' },
+        { text: '简单使用', link: '/scaffold/quickstart' },
       ]
     }
   ]

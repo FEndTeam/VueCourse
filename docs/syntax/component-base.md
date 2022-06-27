@@ -23,3 +23,270 @@
 ![202206231803](./images/202206231803.png)
 
 ## 组件如何实现
+
+* **⓵ 使用原始方法来写UI页面**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #app {
+      width: 100%;
+      height: 100%;
+    }
+
+    .root {
+      background-color: #f3f3f3;
+      padding: 10px;
+    }
+
+    header {
+      width: 100%;
+      height: 100px;
+      background-color: #cccccc;
+    }
+
+    main {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    article {
+      display: flex;
+      width: 70%;
+      height: 500px;
+      background-color: #cccccc;
+      padding: 10px;
+      box-sizing: border-box;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .item {
+      margin-top: 10px;
+      width: 100%;
+      height: 160px;
+      background-color: #999999;
+    }
+
+
+
+    aside {
+      width: calc(30% - 10px);
+      height: 500px;
+      background-color: #cccccc;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      box-sizing: border-box;
+    }
+
+    .unit {
+      width: 100px;
+      height: 100px;
+      background-color: #999999;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    
+  </div>
+  <script src="https://unpkg.com/vue@3"></script>
+
+  <script>
+    let App = {
+      template: ` 
+      <div class="root">
+        <header></header>
+        <main>
+          <article>
+            <div class="item"></div>
+            <div class="item"></div>
+          </article>
+          <aside>
+            <div class="unit"></div>
+            <div class="unit"></div>
+            <div class="unit"></div>
+          </aside>
+        </main>
+      </div>
+      `
+    }
+    let app = Vue.createApp(App);
+    app.mount('#app');
+  </script>
+</body>
+
+</html>
+```
+
+但是以上代码有一些问题，只是使用了Vue的最基本的代码，下面我们修改为组件
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #app {
+      width: 100%;
+      height: 100%;
+    }
+
+    .root {
+      background-color: #f3f3f3;
+      padding: 10px;
+    }
+
+    header {
+      width: 100%;
+      height: 100px;
+      background-color: #cccccc;
+    }
+
+    main {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    article {
+      display: flex;
+      width: 70%;
+      height: 500px;
+      background-color: #cccccc;
+      padding: 10px;
+      box-sizing: border-box;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .item {
+      margin-top: 10px;
+      width: 100%;
+      height: 160px;
+      background-color: #999999;
+    }
+
+
+
+    aside {
+      width: calc(30% - 10px);
+      height: 500px;
+      background-color: #cccccc;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      box-sizing: border-box;
+    }
+
+    .unit {
+      width: 100px;
+      height: 100px;
+      background-color: #999999;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    
+  </div>
+  <script src="https://unpkg.com/vue@3"></script>
+
+  <script>
+    let App = {
+      template: ` 
+      <div class="root">
+        <Header></Header>
+        <Main></Main>
+      </div>
+      `
+    }
+    let app = Vue.createApp(App);
+
+    let Header = {
+      template: `<header></header>`
+    }
+    app.component('Header', Header);
+
+
+    let Article = {
+      template: `
+      <article>
+        <div class="item"></div>
+        <div class="item"></div>
+      </article>
+      `
+    }
+    app.component('Article', Article);
+
+
+    let Aside = {
+      template: `
+        <aside>
+          <div class="unit"></div>
+          <div class="unit"></div>
+          <div class="unit"></div>
+        </aside>
+        `
+    }
+    app.component('Aside', Aside);
+
+    let Main = {
+      template: `
+      <main>
+        <Article></Article>
+        <Aside></Aside>
+      </main>
+      `
+    }
+    app.component('Main', Main);
+
+    app.mount('#app');
+  </script>
+</body>
+
+</html>
+```
+
+以上代码，还是有如下的问题
+
+1. 所有组件写在一个html文件中，代码量会非常的大，不好修改
+2. 写template的时候，没有代码提示
+3. 所有样式混在一起，没有实现组件的单独开发，单独维护
+
+解决方案: 单文件组件 + 脚手架
