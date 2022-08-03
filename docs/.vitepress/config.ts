@@ -7,7 +7,7 @@ export default {
 
   themeConfig: {
     logo: '/images/hero.png',
-    nav:  [
+    nav: [
       // 基本语法
       { text: '基础语法', link: '/syntax/introduction', activeMatch: '/syntax/' },
       // 脚手架
@@ -15,9 +15,18 @@ export default {
       // 路由管理
       { text: '路由', link: '/router/introduction', activeMatch: '/router/' },
       // 状态管理
-      { text: '状态管理', link: '/state/introduction', activeMatch: '/state/' },
+      {
+        text: '状态管理', items: [
+          {
+           text: "Vuex", activeMatch: '/state/vuex/', link: '/state/vuex/introduction',
+          },
+          {
+            text: "Pinia", activeMatch: '/state/pinia/', link: '/state/pinia/introduction',
+           }
+        ]
+      },
       // 服务器端渲染
-      { text: '服务器端渲染', link: '/ssr/introduction', activeMatch: '/ssr/' },
+      // { text: '服务器端渲染', link: '/ssr/introduction', activeMatch: '/ssr/' },
       // 插件
       { text: '常见插件', link: '/plugin/introduction', activeMatch: '/plugin/' },
       // 项目实战 
@@ -32,7 +41,7 @@ export default {
       '/scaffold/': sidebarScaffold(),
       '/router/': sidebarRouter(),
       '/state/': sidebarState(),
-      '/ssr/': sidebarSSR(),
+      // '/ssr/': sidebarSSR(),
       '/plugin/': sidebarPlugin(),
       '/hrms/': sidebarHrms(),
     },
@@ -95,33 +104,26 @@ function sidebarRouter() {
 function sidebarState() {
   return [
     {
-      text: '状态管理-Pinia',
+      text: 'Vuex',
       collapsible: true,
       items: [
         { text: '基本介绍', link: '/state/introduction' },
-      ]
-    },
-    {
-      text: '状态管理-Vuex',
-      collapsible: true,
-      items: [
-        { text: '基本介绍', link: '/state/vuex-introduction' },
       ]
     }
   ]
 }
 
-function sidebarSSR() {
-  return [
-    {
-      text: '服务器端渲染',
-      collapsible: true,
-      items: [
-        { text: 'Introduction', link: '/ssr/introduction' },
-      ]
-    }
-  ]
-}
+// function sidebarSSR() {
+//   return [
+//     {
+//       text: '服务器端渲染',
+//       collapsible: true,
+//       items: [
+//         { text: 'Introduction', link: '/ssr/introduction' },
+//       ]
+//     }
+//   ]
+// }
 
 function sidebarPlugin() {
   return [
@@ -142,7 +144,7 @@ function sidebarHrms() {
       collapsible: true,
       items: [
         { text: '项目介绍', link: '/hrms/introduction' },
-        { text: '环境搭建', link: '/hrms/environment'}
+        { text: '环境搭建', link: '/hrms/environment' }
       ]
     },
     {
