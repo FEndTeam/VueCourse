@@ -144,7 +144,16 @@ function sidebarHrms() {
       collapsible: true,
       items: [
         { text: '项目介绍', link: '/hrms/introduction' },
-        { text: '环境搭建', link: '/hrms/environment' }
+        { text: '环境搭建', link: '/hrms/environment' },
+        { text: '配置跨域代理', link: '/hrms/cross-origin-proxy' }
+      ]
+    },
+    {
+      text: '登录模块',
+      collapsible: true,
+      items: [
+        { text: '页面布局', link: '/hrms/login-template' },
+        { text: '表单校验', link: '/hrms/login-form-validation'}
       ]
     },
     {
