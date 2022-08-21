@@ -16,34 +16,22 @@ export default {
       { text: '路由', link: '/router/introduction', activeMatch: '/router/' },
       // 状态管理
       {
-        text: '状态管理', items: [
-          {
-           text: "Vuex", activeMatch: '/state/vuex/', link: '/state/vuex/introduction',
-          },
-          {
-            text: "Pinia", activeMatch: '/state/pinia/', link: '/state/pinia/introduction',
-           }
-        ]
+        text: '状态管理', link: '/state/introduction',activeMatch: '/state/', 
       },
       // 服务器端渲染
-      // { text: '服务器端渲染', link: '/ssr/introduction', activeMatch: '/ssr/' },
-      // 插件
-      { text: '常见插件', link: '/plugin/introduction', activeMatch: '/plugin/' },
-      // 项目实战 
-      {
-        text: '实战项目', items: [
-          { text: '人力资源管理系统', activeMatch: '/hrms/', link: '/hrms/introduction' },
-        ]
-      },
+      { text: '服务器端渲染', link: '/ssr/introduction', activeMatch: '/ssr/' },
     ],
     sidebar: {
+      // 基本语法
       '/syntax/': sidebarSyntax(),
+      // 脚手架
       '/scaffold/': sidebarScaffold(),
+      // 路由
       '/router/': sidebarRouter(),
+      // 状态管理
       '/state/': sidebarState(),
-      // '/ssr/': sidebarSSR(),
-      '/plugin/': sidebarPlugin(),
-      '/hrms/': sidebarHrms(),
+      // 服务端渲染
+      '/ssr/': sidebarSSR(),
     },
 
     editLink: {
@@ -113,58 +101,19 @@ function sidebarState() {
   ]
 }
 
-// function sidebarSSR() {
-//   return [
-//     {
-//       text: '服务器端渲染',
-//       collapsible: true,
-//       items: [
-//         { text: 'Introduction', link: '/ssr/introduction' },
-//       ]
-//     }
-//   ]
-// }
-
-function sidebarPlugin() {
+function sidebarSSR() {
   return [
     {
-      text: '常用插件',
+      text: '服务器端渲染',
       collapsible: true,
       items: [
-        { text: 'Introduction', link: '/plugin/introduction' },
+        { text: 'Introduction', link: '/ssr/introduction' },
       ]
     }
   ]
 }
 
-function sidebarHrms() {
-  return [
-    {
-      text: '前期准备',
-      collapsible: true,
-      items: [
-        { text: '项目介绍', link: '/hrms/introduction' },
-        { text: '环境搭建', link: '/hrms/environment' },
-        { text: '配置跨域代理', link: '/hrms/cross-origin-proxy' }
-      ]
-    },
-    {
-      text: '登录模块',
-      collapsible: true,
-      items: [
-        { text: '页面布局', link: '/hrms/login-template' },
-        { text: '表单校验', link: '/hrms/login-form-validation'}
-      ]
-    },
-    {
-      text: '后期优化',
-      collapsible: true,
-      items: [
-        { text: 'youhua', link: '/hrms/youhua' },
-      ]
-    }
-  ]
-}
+
 
 
 
