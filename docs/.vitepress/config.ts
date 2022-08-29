@@ -11,12 +11,12 @@ export default {
       // 基本语法
       { text: '基础语法', link: '/syntax/introduction', activeMatch: '/syntax/' },
       // 脚手架
-      { text: '脚手架', link: '/scaffold/introduction.md', activeMatch: '/scaffold/' },
+      { text: '脚手架', link: '/scaffold/introduction', activeMatch: '/scaffold/' },
       // 路由管理
       { text: '路由', link: '/router/introduction', activeMatch: '/router/' },
       // 状态管理
       {
-        text: '状态管理', link: '/state/introduction',activeMatch: '/state/', 
+        text: '状态管理', link: '/state/introduction', activeMatch: '/state/',
       },
       // 服务器端渲染
       { text: '服务器端渲染', link: '/ssr/introduction', activeMatch: '/ssr/' },
@@ -92,7 +92,7 @@ function sidebarRouter() {
 function sidebarState() {
   return [
     {
-      text: 'Vuex',
+      text: '概述',
       collapsible: true,
       items: [
         { text: '基本介绍', link: '/state/introduction' },
