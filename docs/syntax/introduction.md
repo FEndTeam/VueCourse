@@ -10,16 +10,16 @@
 4. Vue版本之间的区别
 :::
 
-## 概念
+## Kn.1: 概念
 
-Vue (发音为 /vjuː/，类似 view) 是一款用于**构建用户界面的 JavaScript 框架**。
+[Vue](https://cn.vuejs.org) (发音为 /vjuː/，类似 view) 是一款用于**构建用户界面的 JavaScript 框架**。
 它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套**声明式的、组件化的**编程模型，帮助你高效地开发用户界面，无论任务是简单还是复杂。
 
 ![202206222257](./images/202206222257.png)
 
-## 特点
+## Kn.2: 特点
 
-* **⓵ 门槛低，上手快**
+* **⓵ 超低的学习门槛**
 
   简单易学，只要稍微会点`HTML`、`CSS`、`JavaScript`基础就能很快上手`Vue`
 
@@ -41,7 +41,7 @@ Vue (发音为 /vjuː/，类似 view) 是一款用于**构建用户界面的 Jav
 
   ![MVVM](./images/202201082009.png)
 
-## 发展简史
+## Kn.3: 发展简史
 
   `Vue` 最初源于 2013 年，当时只是作者尤雨溪(`Evan You`)在 `Google Creative Lab`的创意技术人员(`Create Technologist`)工作时的业余项目。
 
@@ -57,7 +57,7 @@ Vue (发音为 /vjuː/，类似 view) 是一款用于**构建用户界面的 Jav
 
   而万众期待的**Vue 3.x(版本代号：One Piece)于 2020年9月18日 正式推出**。此版本底层核心由 `TypeScript` 重写，除了有九成以上 语法 与 `Vue 2.x` 相容之外，效率变得更快、编译后的体积更小之外，也加入了不少好用的特性。
 
-## Vue版本之间的区别
+## Kn.4: Vue版本之间的区别
 
 在企业中，现存的只有两种版本，即 Vue 2.x  和 Vue 3.x，他们之间的区别
 
@@ -66,3 +66,22 @@ Vue (发音为 /vjuː/，类似 view) 是一款用于**构建用户界面的 Jav
 * Vue3 对 TypeScript 的支持更加友好，对大型前端应用的支持更加游刃有余
 * Vue3 Composition API(组合式API) 使应用中的功能代码更聚合，使组件间公共逻辑的抽取更容易
 * Vue3 中提供了更加先进的功能，比如 teleport，suspense 等
+
+## Kn.5: 快速体验
+
+如果您是一位没有学习过Vue的开发者，请直接复制下面的代码到一个HTML文件的body标签中，直接体验。
+如果您是Vue 2.x 的深入使用者，你可以直接使用脚手架([VueCLI](https://cli.vuejs.org) 或 [Vite](https://v2.vitejs.dev))
+
+```html
+<div id="app">{{ message }}</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+</script>
+```

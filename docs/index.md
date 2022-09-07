@@ -14,7 +14,7 @@ hero:
       link: /syntax/introduction
     - theme: alt
       text: 快速开始 →
-      link: /syntax/quickstart
+      link: /syntax/introduction
 
 features:
   - title: 蝶恋花·槛菊愁烟兰泣露
