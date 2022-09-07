@@ -35,11 +35,22 @@ export default {
 function sidebarSyntax() {
   return [
     {
-      text: '语法',
+      text: '概述',
       collapsible: true,
       items: [
-        { text: '基本介绍', link: '/syntax/introduction' },
+        { text: '简介', link: '/syntax/introduction' },
         { text: '组件化', link: '/syntax/component' },
+      ]
+    },
+    {
+      text: '指令',
+      collapsible: true,
+      items: [
+        { text: '文本渲染', link: '/syntax/direct-text' },
+        { text: '条件判断', link: '/syntax/direct-cond' },
+        { text: '属性绑定', link: '/syntax/direct-prop' },
+        { text: '事件绑定', link: '/syntax/direct-event' },
+        { text: '表单处理', link: '/syntax/direct-form' },
       ]
     }
   ]
