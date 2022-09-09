@@ -39,34 +39,42 @@
 
 **当不使用构建步骤时**，一个 Vue 组件以一个包含 Vue 特定选项的 JavaScript 对象来定义：
 
-```js
-import { ref } from 'vue'
+```html
+ <body>
+    <div id="app">
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+    
+     const App =  {
+        template: `<h1>Hello Vue 3.x</h1>`,
+        setup(){
+          console.log("Hello 我是一个组件");
+        }
+      }
 
-export default {
-  setup() {
-    const count = ref(0)
-    return { count }
-  },
-  template: `
-    <button @click="count++">
-      You clicked me {{ count }} times.
-    </button>`
-}
+      let app = Vue.createApp(App);
+
+      app.mount("#app")
+    </script>
+
+  </body>
 ```
 
 **当使用构建步骤时**，我们一般会将 Vue 组件定义在一个单独的 .vue 文件中，这被叫做单文件组件 (简称 SFC)：
 
 ```html
 <!-- 文件名：App.vue -->
-<script setup>
-import { ref } from 'vue'
-
-const count = ref(0)
-</script>
-
 <template>
-  <button @click="count++">You clicked me {{ count }} times.</button>
+  <h1>Hello Vue 3.x</h1>
 </template>
+<script>
+export default {
+  setup() {
+    console.log("Hello 我是一个组件");
+  }
+}
+</script>
 ```
 
 在实际的开发中，我们通常都会使用构建工具(例如:Vite)来构建项目，进行开发......
