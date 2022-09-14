@@ -65,8 +65,7 @@ function sidebarFalsework() {
       text: '脚手架',
       collapsible: true,
       items: [
-        { text: '基本介绍', link: '/falsework/introduction' },
-        { text: '简单使用', link: '/falsework/quickstart' },
+        { text: '基本介绍', link: '/falsework/introduction' }
       ]
     }
   ]
