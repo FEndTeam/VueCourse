@@ -10,10 +10,13 @@ export default {
     nav: [
       // 基本语法
       { text: '语法', link: '/syntax/introduction', activeMatch: '/syntax/' },
+      { text: '脚手架', link: '/scaffold/introduction', activeMatch: '/scaffold/' },
     ],
     sidebar: {
       // 基本语法
       '/syntax/': sidebarSyntax(),
+      '/scaffold/': sidebarScaffold(),
+
     },
 
     editLink: {
@@ -56,18 +59,18 @@ function sidebarSyntax() {
   ]
 }
 
-// function sidebarScaffold() {
-//   return [
-//     {
-//       text: '脚手架',
-//       collapsible: true,
-//       items: [
-//         { text: '基本介绍', link: '/scaffold/introduction' },
-//         { text: '简单使用', link: '/scaffold/quickstart' },
-//       ]
-//     }
-//   ]
-// }
+function sidebarScaffold() {
+  return [
+    {
+      text: '脚手架',
+      collapsible: true,
+      items: [
+        { text: '基本介绍', link: '/scaffold/introduction' },
+        { text: '简单使用', link: '/scaffold/quickstart' },
+      ]
+    }
+  ]
+}
 
 // function sidebarRouter() {
 //   return [
