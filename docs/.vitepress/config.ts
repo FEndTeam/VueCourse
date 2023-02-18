@@ -11,12 +11,15 @@ export default {
       // 基本语法
       { text: '语法', link: '/syntax/introduction', activeMatch: '/syntax/' },
       { text: '脚手架', link: '/falsework/introduction', activeMatch: '/falsework/' },
+      { text: '路由管理', link: '/router/introduction', activeMatch: '/router/' },
+      { text: '状态管理', link: '/state/introduction', activeMatch: '/state/' },
     ],
     sidebar: {
       // 基本语法
       '/syntax/': sidebarSyntax(),
       '/falsework/': sidebarFalsework(),
-
+      '/router/': sidebarRouter(),
+      '/state/': sidebarState()
     },
 
     editLink: {
@@ -35,6 +38,10 @@ export default {
   }
 }
 
+/**
+ * @name 基本语法
+ * @returns 
+ */
 function sidebarSyntax() {
   return [
     {
@@ -43,6 +50,8 @@ function sidebarSyntax() {
       items: [
         { text: '简介', link: '/syntax/introduction' },
         { text: '组件化', link: '/syntax/component' },
+        { text: 'API风格', link: '/syntax/apistyle' },
+        { text: 'setup函数', link: '/syntax/setupfn' },
       ]
     },
     {
@@ -59,6 +68,10 @@ function sidebarSyntax() {
   ]
 }
 
+/**
+ * @name 脚手架
+ * @returns 
+ */
 function sidebarFalsework() {
   return [
     {
@@ -71,29 +84,37 @@ function sidebarFalsework() {
   ]
 }
 
-// function sidebarRouter() {
-//   return [
-//     {
-//       text: '路由',
-//       collapsible: true,
-//       items: [
-//         { text: 'Introduction', link: '/router/introduction' },
-//       ]
-//     }
-//   ]
-// }
+/**
+ * @name 路由
+ * @returns 
+ */
+function sidebarRouter() {
+  return [
+    {
+      text: '路由',
+      collapsible: true,
+      items: [
+        { text: 'Introduction', link: '/router/introduction' },
+      ]
+    }
+  ]
+}
 
-// function sidebarState() {
-//   return [
-//     {
-//       text: '概述',
-//       collapsible: true,
-//       items: [
-//         { text: '基本介绍', link: '/state/introduction' },
-//       ]
-//     }
-//   ]
-// }
+/**
+ * @name 状态管理
+ * @returns 
+ */
+function sidebarState() {
+  return [
+    {
+      text: '概述',
+      collapsible: true,
+      items: [
+        { text: 'Introduction', link: '/state/introduction' },
+      ]
+    }
+  ]
+}
 
 // function sidebarSSR() {
 //   return [
